@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+
+/* Google Fonts - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+   PPID LLDIKTI4 - Design System
+   Brand: Biru #1d4294 | Oranye #ef9d34
+   =================================== */
+
+@theme {
+    /* Brand Colors */
+    --color-primary: #1d4294;
+    --color-primary-dark: #153070;
+    --color-secondary: #ef9d34;
+    --color-secondary-dark: #c47d25;
+    --color-dark: #0f172a;
+
+    /* Typography */
+    --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+/* ===================================
+   Global Base
+   =================================== */
+body {
+    font-family: var(--font-sans);
+}
+
+/* ===================================
+   Glassmorphism - Navbar
+   =================================== */
+.glass-nav {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===================================
+   Glassmorphism - Card
+   =================================== */
+.glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 10px 30px -10px rgba(29, 66, 148, 0.1);
+}
+
+/* ===================================
+   Text Gradient
+   =================================== */
+.text-gradient {
+    background: linear-gradient(135deg, #1d4294, #ef9d34);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ===================================
+   Hero Dot Pattern
+   =================================== */
+.hero-pattern {
+    background-image: radial-gradient(#1d4294 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.05;
+}
+
+/* ===================================
+   Animations
+   =================================== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes sweep {
+    0%   { opacity: 0; margin-top: -10px; }
+    100% { opacity: 1; margin-top: 0px; }
+}
+
+/* ===================================
+   Tab System (Informasi Publik)
+   =================================== */
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+
+/* ===================================
+   Accordion (Rekapitulasi)
+   =================================== */
+details > summary {
+    list-style: none;
+}
+details > summary::-webkit-details-marker {
+    display: none;
+}
+details[open] summary ~ * {
+    animation: sweep 0.3s ease-in-out;
+}
+
+/* ===================================
+   Navbar Scrolled State
+   =================================== */
+.navbar-scrolled {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(10px) !important;
+    box-shadow: 0 4px 20px -4px rgba(0,0,0,0.1);
+}
+
+/* ===================================
+   Utility: Border Accent Left
+   =================================== */
+.border-l-accent-primary {
+    border-left: 4px solid #1d4294;
+}
+
+.border-l-accent-secondary {
+    border-left: 4px solid #ef9d34;
+}

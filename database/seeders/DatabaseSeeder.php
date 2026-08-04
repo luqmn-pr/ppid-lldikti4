@@ -1,0 +1,55 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Models\User;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
+
+class DatabaseSeeder extends Seeder
+{
+    use WithoutModelEvents;
+
+    /**
+     * Seed the application's database.
+     */
+    public function run(): void
+    {
+        // User::factory(10)->create();
+
+        User::factory()->create([
+            'name' => 'Test User',
+            'email' => 'test@example.com',
+        ]);
+
+        \App\Models\Regulasi::create([
+            'judul' => 'UU Nomor 14 Tahun 2008',
+            'sinopsis' => 'Tentang Keterbukaan Informasi Publik',
+            'is_active' => true,
+        ]);
+
+        \App\Models\Regulasi::create([
+            'judul' => 'PP Nomor 61 Tahun 2010',
+            'sinopsis' => 'Tentang Pelaksanaan Undang-undang Keterbukaan Informasi Publik',
+            'is_active' => true,
+        ]);
+
+        \App\Models\InformasiPublik::create([
+            'judul' => 'Informasi Profil LLDIKTI Wilayah IV',
+            'kategori' => 'setiap_saat',
+            'link_tautan' => 'https://lldikti4.kemdikbud.go.e-ppid',
+        ]);
+
+        \App\Models\InformasiPublik::create([
+            'judul' => 'Standar Pelayanan Publik',
+            'kategori' => 'berkala',
+            'link_tautan' => 'https://lldikti4.kemdikbud.go.e-ppid/standar',
+        ]);
+
+        \App\Models\InformasiPublik::create([
+            'judul' => 'Pencegahan COVID-19',
+            'kategori' => 'serta_merta',
+            'file_pdf' => null,
+        ]);
+    }
+}

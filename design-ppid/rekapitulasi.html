@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rekapitulasi Permohonan - PPID LLDIKTI Wilayah IV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1d4294',
+                        'primary-dark': '#153070',
+                        secondary: '#ef9d34',
+                        'secondary-dark': '#c47d25',
+                        dark: '#0f172a',
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="assets/css/global.css">
+    <style>
+        /* Custom styles for details/summary */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+        details[open] summary ~ * {
+            animation: sweep .3s ease-in-out;
+        }
+        @keyframes sweep {
+            0%    {opacity: 0; margin-top: -10px}
+            100%  {opacity: 1; margin-top: 0px}
+        }
+    </style>
+</head>
+
+<body class="text-slate-800 antialiased overflow-x-hidden bg-slate-50">
+
+    <div id="header-placeholder"></div>
+
+    <!-- Page Header (Template) -->
+    <div class="relative pt-32 pb-16 overflow-hidden bg-white border-b border-slate-100">
+        <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50 pointer-events-none"></div>
+        <div class="absolute right-0 top-0 w-[500px] h-[400px] bg-blue-100 rounded-full blur-[120px] opacity-30 pointer-events-none -translate-y-1/2"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex items-center gap-2 text-sm text-slate-400 mb-6">
+                <a href="index.html" class="hover:text-primary transition-colors">Beranda</a>
+                <i class="ph ph-caret-right text-slate-300"></i>
+                <a href="#" class="hover:text-primary transition-colors">Informasi Publik</a>
+                <i class="ph ph-caret-right text-slate-300"></i>
+                <span class="text-slate-600 font-medium">Rekapitulasi Permohonan</span>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-extrabold text-slate-800 mb-4 uppercase tracking-tight">Rekapitulasi Permohonan Informasi Publik</h1>
+            <div class="w-12 h-1 bg-secondary rounded-full mb-4"></div>
+            <p class="text-slate-500 max-w-xl text-base leading-relaxed">Laporan rekapitulasi jumlah permohonan informasi, waktu penyelesaian, dan status permohonan dari tahun ke tahun.</p>
+        </div>
+    </div>
+
+    <!-- Content Section -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <div class="space-y-8">
+                <!-- Tahun 2024 -->
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-primary/10 text-primary flex items-center justify-center"><i class="ph-bold ph-calendar-blank"></i></span>
+                        Tahun 2024
+                    </h2>
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden divide-y divide-slate-100">
+                        
+                        <!-- Sub Item 1 -->
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-700 hover:bg-slate-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-slate-400 group-open:rotate-90 transition-transform"></i>
+                                    Jumlah Register Permohonan Informasi Tahun 2024
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-slate-50/50 border-t border-slate-100">
+                                <img src="https://placehold.co/1000x400/f8fafc/1d4294?text=Grafik+Register+Permohonan+2024" alt="Grafik 2024" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+
+                        <!-- Sub Item 2 -->
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-700 hover:bg-slate-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-slate-400 group-open:rotate-90 transition-transform"></i>
+                                    Waktu Penyelesaian Permohonan Tahun 2024
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-slate-50/50 border-t border-slate-100">
+                                <img src="https://placehold.co/1000x400/f8fafc/ef9d34?text=Grafik+Waktu+Penyelesaian+2024" alt="Grafik 2024" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+
+                        <!-- Sub Item 3 -->
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-700 hover:bg-slate-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-slate-400 group-open:rotate-90 transition-transform"></i>
+                                    Jumlah Permohonan Informasi yang dikabulkan dan ditolak Tahun 2024
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-slate-50/50 border-t border-slate-100">
+                                <img src="https://placehold.co/1000x400/f8fafc/1d4294?text=Grafik+Status+Permohonan+2024" alt="Grafik 2024" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+
+                <!-- Tahun 2023 -->
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center"><i class="ph-bold ph-calendar-blank"></i></span>
+                        Tahun 2023
+                    </h2>
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden divide-y divide-slate-100">
+                        
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-700 hover:bg-slate-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-slate-400 group-open:rotate-90 transition-transform"></i>
+                                    Jumlah Register Permohonan Informasi Tahun 2023
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-slate-50/50 border-t border-slate-100">
+                                <img src="https://placehold.co/1000x400/f8fafc/1d4294?text=Grafik+Register+Permohonan+2023" alt="Grafik 2023" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+                        
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-700 hover:bg-slate-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-slate-400 group-open:rotate-90 transition-transform"></i>
+                                    Waktu Penyelesaian Permohonan Tahun 2023
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-slate-50/50 border-t border-slate-100">
+                                <img src="https://placehold.co/1000x400/f8fafc/ef9d34?text=Grafik+Waktu+Penyelesaian+2023" alt="Grafik 2023" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+
+                <!-- Tahun 2022 -->
+                <div>
+                    <h2 class="text-xl font-bold text-slate-800 mb-4 flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center"><i class="ph-bold ph-calendar-blank"></i></span>
+                        Tahun 2022
+                    </h2>
+                    <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden divide-y divide-slate-100">
+                        
+                        <!-- the screenshot shows open details for this one -->
+                        <details class="group" open>
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 bg-blue-50/50 text-primary transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-primary group-open:rotate-90 transition-transform"></i>
+                                    Jumlah Register Permohonan Informasi Tahun 2022
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-white border-t border-slate-100">
+                                <!-- Example embedded image mimicking the chart in the screenshot -->
+                                <h3 class="text-center font-bold text-slate-700 mb-6">Jumlah Register Permohonan Informasi Tahun 2022</h3>
+                                <img src="https://placehold.co/1000x400/ffffff/1d4294?text=Grafik+Garis+Register+2022" alt="Grafik 2022" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+                        
+                        <details class="group">
+                            <summary class="flex justify-between items-center font-semibold cursor-pointer list-none p-5 text-slate-700 hover:bg-slate-50 transition-colors">
+                                <span class="flex items-center gap-3">
+                                    <i class="ph-bold ph-caret-right text-slate-400 group-open:rotate-90 transition-transform"></i>
+                                    Waktu Penyelesaian Permohonan Tahun 2022
+                                </span>
+                            </summary>
+                            <div class="p-5 bg-slate-50/50 border-t border-slate-100">
+                                <img src="https://placehold.co/1000x400/f8fafc/ef9d34?text=Grafik+Waktu+Penyelesaian+2022" alt="Grafik 2022" class="w-full h-auto rounded-xl shadow-sm border border-slate-200">
+                            </div>
+                        </details>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="assets/js/components.js"></script>
+    <script>
+        // Make the accordions exclusive (optional, if we want only one open at a time)
+        const details = document.querySelectorAll("details");
+        details.forEach((targetDetail) => {
+            targetDetail.addEventListener("click", () => {
+                details.forEach((detail) => {
+                    if (detail !== targetDetail) {
+                        detail.removeAttribute("open");
+                        // Reset style if needed
+                        detail.querySelector('summary').classList.remove('bg-blue-50/50', 'text-primary');
+                        detail.querySelector('summary').classList.add('text-slate-700');
+                        detail.querySelector('i').classList.replace('text-primary', 'text-slate-400');
+                    }
+                });
+                
+                // Toggle styles for clicked element
+                setTimeout(() => {
+                    if(targetDetail.hasAttribute('open')) {
+                        targetDetail.querySelector('summary').classList.add('bg-blue-50/50', 'text-primary');
+                        targetDetail.querySelector('summary').classList.remove('text-slate-700');
+                        targetDetail.querySelector('i').classList.replace('text-slate-400', 'text-primary');
+                    } else {
+                        targetDetail.querySelector('summary').classList.remove('bg-blue-50/50', 'text-primary');
+                        targetDetail.querySelector('summary').classList.add('text-slate-700');
+                        targetDetail.querySelector('i').classList.replace('text-primary', 'text-slate-400');
+                    }
+                }, 10);
+            });
+        });
+    </script>
+</body>
+
+</html>
+
