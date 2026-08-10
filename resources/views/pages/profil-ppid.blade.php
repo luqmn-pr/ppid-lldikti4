@@ -3,6 +3,9 @@
 @section('title', 'Profil Singkat PPID - LLDIKTI Wilayah IV')
 
 @section('content')
+@php
+    $profil = app(\App\Settings\ProfilSettings::class);
+@endphp
 <!-- Page Header -->
 <div class="relative pt-32 pb-16 overflow-hidden bg-white border-b border-slate-100">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50 pointer-events-none"></div>
@@ -31,10 +34,23 @@
                 <span class="inline-block text-xs font-bold text-secondary uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full mb-4">Tentang PPID</span>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800 mb-6 leading-snug">Komitmen Keterbukaan<br>Informasi Publik</h2>
                 <div class="space-y-5 text-[15px] text-slate-600 leading-[1.85]">
-                    <p>Keterbukaan informasi publik merupakan bagian penting dari upaya mewujudkan tata kelola pemerintahan yang baik, transparan, dan akuntabel. Sebagai bentuk pelaksanaan amanat <strong class="font-semibold text-slate-800">Undang-Undang Nomor 14 Tahun 2008</strong> tentang Keterbukaan Informasi Publik, Lembaga Layanan Pendidikan Tinggi (LLDikti) Wilayah IV menyelenggarakan pelayanan informasi publik melalui Pejabat Pengelola Informasi dan Dokumentasi (PPID).</p>
-                    <p>PPID LLDikti Wilayah IV ditetapkan melalui Keputusan Kepala LLDIKTI Wilayah IV dan bertugas mengelola serta memberikan layanan informasi publik kepada masyarakat, khususnya pemangku kepentingan di bidang pendidikan tinggi.</p>
-                    <p>Sesuai ketentuan <strong class="font-semibold text-slate-800">Permendikbud Nomor 41 Tahun 2020</strong>, PPID LLDikti Wilayah IV merupakan bagian dari sistem PPID Kementerian Pendidikan Tinggi, Sains, dan Teknologi (Kemdiktisaintek) — berperan sebagai perpanjangan tangan kementerian dalam mendukung keterbukaan proses pengambilan keputusan dan memastikan hak masyarakat atas informasi publik terpenuhi.</p>
-                    <p>Kami mengundang masyarakat untuk menelusuri berbagai informasi yang tersedia — mulai dari kebijakan pendidikan tinggi, layanan kelembagaan, hingga informasi publik lainnya — sebagai bagian dari upaya bersama membangun ekosistem pendidikan tinggi yang terbuka dan berintegritas.</p>
+                    <p>{{ $profil->tentang_ppid }}</p>
+                    @if($profil->visi)
+                    <div class="mt-4 p-4 bg-blue-50 border-l-4 border-primary rounded-r-xl">
+                        <h4 class="font-bold text-primary mb-1">Visi</h4>
+                        <p class="text-sm font-medium">{{ $profil->visi }}</p>
+                    </div>
+                    @endif
+                    @if(!empty($profil->misi))
+                    <div class="mt-4">
+                        <h4 class="font-bold text-slate-800 mb-2">Misi</h4>
+                        <ul class="list-disc pl-5 space-y-1 text-sm">
+                            @foreach($profil->misi as $misi)
+                            <li>{{ $misi['teks'] }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    @endif
                 </div>
                 <div class="mt-8 pt-6 border-t border-slate-100">
                     <p class="text-primary font-semibold italic text-sm">— Salam Keterbukaan Informasi.</p>
@@ -116,50 +132,16 @@
                         <i class="ph-fill ph-clipboard-text text-2xl text-slate-500"></i>
                     </div>
                     <h3 class="text-base font-extrabold text-slate-800 uppercase tracking-wide">Tugas PPID</h3>
-                    <p class="text-xs text-slate-400 mt-1">10 tugas pokok pengelolaan informasi</p>
+                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->tugas_fungsi) }} tugas pokok pengelolaan informasi</p>
                 </div>
                 <div class="px-8 py-6">
                     <ul class="space-y-3.5">
+                        @foreach($profil->tugas_fungsi as $index => $tugas)
                         <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">1</span>
-                            <span>Menyediakan, menyimpan, mendokumentasikan, dan mengamankan Informasi.</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">{{ $index + 1 }}</span>
+                            <span>{{ $tugas['teks'] }}</span>
                         </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">2</span>
-                            <span>Menyediakan sumber daya untuk pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">3</span>
-                            <span>Menganggarkan pembiayaan bagi pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">4</span>
-                            <span>Membuat prosedur pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">5</span>
-                            <span>Melayani permintaan Informasi Publik secara cepat, tepat, dan sederhana sesuai aturan yang berlaku.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">6</span>
-                            <span>Membuat pertimbangan tertulis atas setiap kebijakan untuk memenuhi hak setiap orang atas Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">7</span>
-                            <span>Mengoordinasikan dan mengonsolidasikan pengumpulan Dokumen Informasi Publik dari tim kerja PPID.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">8</span>
-                            <span>Mengklasifikasikan Informasi publik dan/atau perubahannya.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">9</span>
-                            <span>Melakukan evaluasi terhadap pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">10</span>
-                            <span>Menyusun laporan pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -171,50 +153,16 @@
                         <i class="ph-fill ph-shield-check text-2xl text-slate-500"></i>
                     </div>
                     <h3 class="text-base font-extrabold text-slate-800 uppercase tracking-wide">Wewenang PPID</h3>
-                    <p class="text-xs text-slate-400 mt-1">10 kewenangan dalam pengelolaan informasi</p>
+                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->wewenang) }} kewenangan dalam pengelolaan informasi</p>
                 </div>
                 <div class="px-8 py-6">
                     <ul class="space-y-3.5">
+                        @foreach($profil->wewenang as $index => $wew)
                         <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">1</span>
-                            <span>Menugaskan tim kerja untuk membuat, mengelola, memelihara, dan/atau memutakhirkan Daftar Informasi Publik.</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">{{ $index + 1 }}</span>
+                            <span>{{ $wew['teks'] }}</span>
                         </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">2</span>
-                            <span>Menetapkan Daftar Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">3</span>
-                            <span>Mengusulkan Informasi yang dikecualikan kepada PPID Utama Kementerian.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">4</span>
-                            <span>Menetapkan ketersediaan sumber daya untuk pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">5</span>
-                            <span>Memastikan tersedianya anggaran untuk pelaksanaan pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">6</span>
-                            <span>Menetapkan prosedur pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">7</span>
-                            <span>Menerima atau menolak permintaan Informasi Publik dengan pertimbangan tertulis apabila termasuk informasi yang dikecualikan.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">8</span>
-                            <span>Melaksanakan rapat koordinasi dan rapat kerja secara berkala sesuai kebutuhan dalam pelaksanaan pelayanan informasi.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">9</span>
-                            <span>Menetapkan strategi dan metode pengawasan, evaluasi, dan monitoring atas pelaksanaan kebijakan teknis pelayanan informasi publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">10</span>
-                            <span>Menetapkan laporan pelaksanaan pelayanan dan pendokumentasian Informasi Publik.</span>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -226,26 +174,16 @@
                         <i class="ph-fill ph-users-three text-2xl text-slate-500"></i>
                     </div>
                     <h3 class="text-base font-extrabold text-slate-800 uppercase tracking-wide">Tim Pertimbangan PPID</h3>
-                    <p class="text-xs text-slate-400 mt-1">4 tugas tim pertimbangan</p>
+                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->tim_pertimbangan) }} tugas tim pertimbangan</p>
                 </div>
                 <div class="px-8 py-6">
                     <ul class="space-y-3.5">
+                        @foreach($profil->tim_pertimbangan as $index => $tim)
                         <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">1</span>
-                            <span>Menangani keberatan awal sebelum sengketa berlanjut ke Komisi Informasi.</span>
+                            <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">{{ $index + 1 }}</span>
+                            <span>{{ $tim['teks'] }}</span>
                         </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">2</span>
-                            <span>Menyusun pertimbangan tertulis mengenai dampak pengecualian informasi dalam Pengujian Konsekuensi.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">3</span>
-                            <span>Menyusun Daftar Informasi Publik.</span>
-                        </li>
-                        <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
-                            <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">4</span>
-                            <span>Mengusulkan informasi yang dikecualikan.</span>
-                        </li>
+                        @endforeach
                     </ul>
                 </div>
             </div>

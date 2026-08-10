@@ -31,3 +31,17 @@ Route::get('/informasi-publik/rekapitulasi', [InformasiPublikController::class, 
 Route::get('/tata-cara', [TataCaraController::class, 'index'])->name('tata-cara');
 
 Route::get('/data-informasi', [DataInformasiController::class, 'index'])->name('data-informasi');
+
+Route::get('/formulir-permohonan', function () {
+    return view('pages.form-viewer', [
+        'title' => 'Formulir Permohonan Informasi',
+        'pdf_file' => app(\App\Settings\GeneralSettings::class)->file_form_permohonan
+    ]);
+})->name('formulir.permohonan');
+
+Route::get('/formulir-keberatan', function () {
+    return view('pages.form-viewer', [
+        'title' => 'Formulir Pernyataan Keberatan',
+        'pdf_file' => app(\App\Settings\GeneralSettings::class)->file_form_keberatan
+    ]);
+})->name('formulir.keberatan');

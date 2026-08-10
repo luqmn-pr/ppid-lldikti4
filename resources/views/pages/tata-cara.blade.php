@@ -20,53 +20,60 @@
 </div>
 
 <!-- Content Section -->
+@php
+    $categories = \App\Models\TataCara::orderBy('urutan')->get()->groupBy('kategori');
+    $colors = [
+        'blue' => ['bg' => 'bg-blue-50', 'text' => 'text-primary', 'border' => 'border-primary', 'shadow' => 'shadow-primary/20'],
+        'rose' => ['bg' => 'bg-rose-50', 'text' => 'text-rose-600', 'border' => 'border-rose-500', 'shadow' => 'shadow-rose-500/20'],
+        'orange' => ['bg' => 'bg-orange-50', 'text' => 'text-secondary', 'border' => 'border-secondary', 'shadow' => 'shadow-orange-500/20'],
+        'emerald' => ['bg' => 'bg-emerald-50', 'text' => 'text-emerald-600', 'border' => 'border-emerald-500', 'shadow' => 'shadow-emerald-500/20'],
+    ];
+@endphp
 <div class="py-20 bg-white min-h-[50vh]">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        @forelse($categories as $kategori => $steps)
+        @php
+            $colorKey = array_keys($colors)[$loop->index % count($colors)];
+            $c = $colors[$colorKey];
+        @endphp
+        <div class="mb-20">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800 mb-8 border-b-2 {{ $c['border'] }} inline-block pb-2">{{ $kategori }}</h2>
             
-            <!-- Card 1 -->
-            <a href="#" class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 group flex flex-col items-center text-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-b from-blue-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <!-- Mock Icon -->
-                <div class="w-32 h-32 mb-8 relative z-10">
-                    <img src="https://img.freepik.com/free-vector/contact-center-abstract-concept-vector-illustration_107173-24953.jpg?w=740" class="w-full h-full object-contain mix-blend-multiply" alt="Icon Permohonan">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                @foreach($steps as $step)
+                <div class="bg-white rounded-2xl p-6 border border-slate-100 shadow-lg shadow-slate-200/50 hover:-translate-y-1 hover:shadow-xl hover:{{ $c['shadow'] }} transition-all duration-300 flex flex-col relative overflow-hidden group">
+                    <div class="absolute inset-0 bg-gradient-to-b from-{{ $colorKey }}-50/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    
+                    <div class="flex items-center gap-4 mb-4 relative z-10">
+                        <div class="w-12 h-12 rounded-xl {{ $c['bg'] }} flex items-center justify-center flex-shrink-0">
+                            <i class="ph-fill {{ $step->icon ?? 'ph-check-circle' }} text-2xl {{ $c['text'] }}"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-800 text-lg leading-tight">{{ $step->judul_langkah }}</h3>
+                    </div>
+                    
+                    <p class="text-sm text-slate-600 leading-relaxed relative z-10">
+                        {{ $step->deskripsi_langkah }}
+                    </p>
+                    
+                    <!-- Step Number Indicator -->
+                    <div class="absolute top-4 right-4 text-6xl font-black text-slate-50 opacity-50 select-none z-0 group-hover:text-{{ $colorKey }}-50 transition-colors">
+                        {{ $loop->iteration }}
+                    </div>
                 </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4 relative z-10 group-hover:text-primary transition-colors">Tata Cara Permohonan Informasi</h3>
-                <div class="w-8 h-1 bg-slate-200 rounded-full mt-auto mb-4 group-hover:bg-primary group-hover:w-16 transition-all duration-300 relative z-10"></div>
-                <span class="text-sm font-bold text-primary flex items-center gap-1 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all relative z-10">
-                    Lihat Panduan <i class="ph-bold ph-arrow-right"></i>
-                </span>
-            </a>
-
-            <!-- Card 2 -->
-            <a href="#" class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-rose-500/20 transition-all duration-300 group flex flex-col items-center text-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-b from-rose-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <!-- Mock Icon -->
-                <div class="w-32 h-32 mb-8 relative z-10">
-                    <img src="https://img.freepik.com/free-vector/dispute-resolution-abstract-concept-vector-illustration_107173-25593.jpg?w=740" class="w-full h-full object-contain mix-blend-multiply" alt="Icon Keberatan">
-                </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4 relative z-10 group-hover:text-rose-600 transition-colors">Tata Cara Pengajuan Keberatan</h3>
-                <div class="w-8 h-1 bg-slate-200 rounded-full mt-auto mb-4 group-hover:bg-rose-500 group-hover:w-16 transition-all duration-300 relative z-10"></div>
-                <span class="text-sm font-bold text-rose-600 flex items-center gap-1 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all relative z-10">
-                    Lihat Panduan <i class="ph-bold ph-arrow-right"></i>
-                </span>
-            </a>
-
-            <!-- Card 3 -->
-            <a href="#" class="bg-white rounded-3xl p-8 border border-slate-100 shadow-xl shadow-slate-200/50 hover:-translate-y-2 hover:shadow-2xl hover:shadow-orange-500/20 transition-all duration-300 group flex flex-col items-center text-center relative overflow-hidden">
-                <div class="absolute inset-0 bg-gradient-to-b from-orange-50/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                <!-- Mock Icon -->
-                <div class="w-32 h-32 mb-8 relative z-10">
-                    <img src="https://img.freepik.com/free-vector/consulting-concept-illustration_114360-2565.jpg?w=740" class="w-full h-full object-contain mix-blend-multiply" alt="Icon Sengketa">
-                </div>
-                <h3 class="text-xl font-bold text-slate-800 mb-4 relative z-10 group-hover:text-secondary transition-colors">Tata Cara Pengajuan Permohonan Penyelesaian Sengketa Ke Komisi Informasi</h3>
-                <div class="w-8 h-1 bg-slate-200 rounded-full mt-auto mb-4 group-hover:bg-secondary group-hover:w-16 transition-all duration-300 relative z-10"></div>
-                <span class="text-sm font-bold text-secondary flex items-center gap-1 opacity-0 group-hover:opacity-100 transform translate-y-2 group-hover:translate-y-0 transition-all relative z-10">
-                    Lihat Panduan <i class="ph-bold ph-arrow-right"></i>
-                </span>
-            </a>
-
+                @endforeach
+            </div>
         </div>
+        @empty
+        <div class="text-center py-12">
+            <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 mb-4">
+                <i class="ph ph-folder-open text-2xl text-slate-400"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-700 mb-2">Belum Ada Data Tata Cara</h3>
+            <p class="text-slate-500">Data tata cara akan tampil di sini setelah ditambahkan melalui panel admin.</p>
+        </div>
+        @endforelse
+
     </div>
 </div>
 @endsection
