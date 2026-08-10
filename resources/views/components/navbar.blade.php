@@ -36,6 +36,7 @@
                         <div class="bg-white rounded-xl shadow-xl shadow-slate-200/50 border border-slate-100 p-2">
                             <a href="{{ route('informasi-publik.daftar') }}" class="block px-4 py-2.5 text-sm {{ request()->routeIs('informasi-publik.daftar') ? 'text-primary font-medium bg-blue-50/50' : 'text-slate-600 hover:bg-blue-50 hover:text-primary' }} rounded-lg transition-colors">Daftar Informasi Publik</a>
                             <a href="{{ route('informasi-publik.maklumat') }}" class="block px-4 py-2.5 text-sm {{ request()->routeIs('informasi-publik.maklumat') ? 'text-primary font-medium bg-blue-50/50' : 'text-slate-600 hover:bg-blue-50 hover:text-primary' }} rounded-lg transition-colors">Maklumat Pelayanan Informasi Publik</a>
+                            <a href="{{ route('data-informasi') }}" class="block px-4 py-2.5 text-sm {{ request()->routeIs('data-informasi') ? 'text-primary font-medium bg-blue-50/50' : 'text-slate-600 hover:bg-blue-50 hover:text-primary' }} rounded-lg transition-colors">Data dan Informasi</a>
                             <a href="{{ route('informasi-publik.index', ['tab' => 'setiap-saat']) }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Informasi Tersedia Setiap Saat</a>
                             <a href="{{ route('informasi-publik.index', ['tab' => 'berkala']) }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Informasi Tersedia Secara Berkala</a>
                             <a href="{{ route('informasi-publik.index', ['tab' => 'serta-merta']) }}" class="block px-4 py-2.5 text-sm text-slate-600 hover:bg-blue-50 hover:text-primary rounded-lg transition-colors">Informasi Serta Merta</a>
@@ -78,6 +79,7 @@
                 <div class="space-y-1 pl-3 border-l-2 border-slate-100">
                     <a href="{{ route('informasi-publik.daftar') }}" class="block py-2 text-sm {{ request()->routeIs('informasi-publik.daftar') ? 'text-primary font-medium' : 'text-slate-600 hover:text-primary' }}">Daftar Informasi Publik</a>
                     <a href="{{ route('informasi-publik.maklumat') }}" class="block py-2 text-sm {{ request()->routeIs('informasi-publik.maklumat') ? 'text-primary font-medium' : 'text-slate-600 hover:text-primary' }}">Maklumat Pelayanan</a>
+                    <a href="{{ route('data-informasi') }}" class="block py-2 text-sm {{ request()->routeIs('data-informasi') ? 'text-primary font-medium' : 'text-slate-600 hover:text-primary' }}">Data dan Informasi</a>
                     <a href="{{ route('informasi-publik.index') }}" class="block py-2 text-sm text-slate-600 hover:text-primary">Kategori Informasi</a>
                     <a href="{{ route('informasi-publik.rekapitulasi') }}" class="block py-2 text-sm {{ request()->routeIs('informasi-publik.rekapitulasi') ? 'text-primary font-medium' : 'text-slate-600 hover:text-primary' }}">Rekapitulasi Permohonan</a>
                 </div>

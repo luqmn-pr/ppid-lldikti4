@@ -105,3 +105,16 @@
 [Mon Aug 10 02:40:59 2026] 127.0.0.1:59047 [GET] URI: /admin/tautan-pentings/1/edit
 [Mon Aug 10 02:41:01 2026] 127.0.0.1:65450 [GET] URI: /
 [Mon Aug 10 02:41:08 2026] 127.0.0.1:63621 [POST] URI: /livewire/update
+[Mon Aug 10 02:44:45 2026] 127.0.0.1:54785 [GET] URI: /
+[Mon Aug 10 02:46:06 2026] 127.0.0.1:61555 [GET] URI: /
+[Mon Aug 10 02:46:27 2026] 127.0.0.1:49208 [GET] URI: /admin/tautan-pentings/1/edit
+[Mon Aug 10 02:46:31 2026] 127.0.0.1:58841 [GET] URI: /admin
+[Mon Aug 10 02:46:33 2026] 127.0.0.1:52666 [GET] URI: /admin/informasi-publiks
+[Mon Aug 10 02:46:36 2026] 127.0.0.1:54377 [GET] URI: /admin/regulasis
+[Mon Aug 10 02:46:40 2026] 127.0.0.1:62219 [GET] URI: /admin/manage-general-settings
+[Mon Aug 10 02:46:42 2026] 127.0.0.1:61034 [POST] URI: /livewire/update
+[Mon Aug 10 02:47:05 2026] 127.0.0.1:62723 [GET] URI: /admin/manage-hero-settings
+[Mon Aug 10 02:47:06 2026] 127.0.0.1:64013 [POST] URI: /livewire/update
+[Mon Aug 10 02:47:09 2026] 127.0.0.1:65258 [GET] URI: /admin/manage-profil-settings
+[Mon Aug 10 02:47:11 2026] 127.0.0.1:64476 [POST] URI: /livewire/update
+[Mon Aug 10 02:47:18 2026] 127.0.0.1:60766 [POST] URI: /livewire/update

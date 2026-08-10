@@ -32,6 +32,7 @@ class ManageHeroSettings extends SettingsPage
                         Forms\Components\FileUpload::make('background_image')
                             ->image()
                             ->directory('settings')
+                            ->preserveFilenames()
                             ->label('Gambar Background')
                             ->columnSpanFull(),
                         Forms\Components\TextInput::make('stats_count')->required()->label('Angka Statistik (cth: 65)'),

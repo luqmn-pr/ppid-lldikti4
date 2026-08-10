@@ -64,5 +64,37 @@ class DatabaseSeeder extends Seeder
             'kategori' => 'serta_merta',
             'file_pdf' => null,
         ]);
+        \App\Models\Layanan::updateOrCreate(
+            ['judul' => 'Halaman Berkala'],
+            [
+                'deskripsi' => 'Informasi yang diperbarui secara berkala',
+                'url' => '/informasi-publik?tab=berkala',
+                'icon' => 'ph-calendar-check',
+                'is_active' => true,
+                'urutan' => 1
+            ]
+        );
+
+        \App\Models\Layanan::updateOrCreate(
+            ['judul' => 'Informasi Tersedia Setiap Saat'],
+            [
+                'deskripsi' => 'Informasi yang dapat diakses kapan saja',
+                'url' => '/informasi-publik?tab=setiap-saat',
+                'icon' => 'ph-info',
+                'is_active' => true,
+                'urutan' => 2
+            ]
+        );
+
+        \App\Models\Layanan::updateOrCreate(
+            ['judul' => 'Informasi Serta Merta'],
+            [
+                'deskripsi' => 'Informasi yang berkaitan dengan hajat hidup orang banyak',
+                'url' => '/informasi-publik?tab=serta-merta',
+                'icon' => 'ph-file-text',
+                'is_active' => true,
+                'urutan' => 3
+            ]
+        );
     }
 }

@@ -40,6 +40,7 @@ class InformasiPublikResource extends Resource
                     ->directory('informasi-publik')
                     ->acceptedFileTypes(['application/pdf'])
                     ->maxSize(10240)
+                    ->preserveFilenames()
                     ->requiredWithout('link_tautan')
                     ->rule('prohibits:link_tautan'),
                 Forms\Components\TextInput::make('link_tautan')

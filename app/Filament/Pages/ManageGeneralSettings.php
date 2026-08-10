@@ -44,16 +44,19 @@ class ManageGeneralSettings extends SettingsPage
                         Forms\Components\FileUpload::make('maklumat_image')
                             ->image()
                             ->directory('settings')
+                            ->preserveFilenames()
                             ->label('Sertifikat Maklumat Pelayanan')
                             ->columnSpanFull(),
                         Forms\Components\FileUpload::make('file_form_permohonan')
                             ->label('File Form Permohonan Informasi (PDF)')
                             ->acceptedFileTypes(['application/pdf'])
-                            ->directory('formulir'),
+                            ->directory('formulir')
+                            ->preserveFilenames(),
                         Forms\Components\FileUpload::make('file_form_keberatan')
                             ->label('File Form Pernyataan Keberatan (PDF)')
                             ->acceptedFileTypes(['application/pdf'])
-                            ->directory('formulir'),
+                            ->directory('formulir')
+                            ->preserveFilenames(),
                     ]),
             ]);
     }
