@@ -19,6 +19,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        if ($prefix = env('APP_PREFIX')) {
+            \Livewire\Livewire::setUpdateRoute(function ($handle) use ($prefix) {
+                return \Illuminate\Support\Facades\Route::post("/{$prefix}/livewire/update", $handle);
+            });
+            \Livewire\Livewire::setScriptRoute(function ($handle) use ($prefix) {
+                return \Illuminate\Support\Facades\Route::get("/{$prefix}/livewire/livewire.js", $handle);
+            });
+        }
     }
 }
