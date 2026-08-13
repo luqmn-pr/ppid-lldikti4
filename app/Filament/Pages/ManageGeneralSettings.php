@@ -29,13 +29,12 @@ class ManageGeneralSettings extends SettingsPage
                         Forms\Components\TextInput::make('url_lapor')->url()->required()->label('URL Website LAPOR!'),
                     ])->columns(2),
 
-                Forms\Components\Section::make('Sosial Media & Peta')
+                Forms\Components\Section::make('Sosial Media')
                     ->schema([
                         Forms\Components\TextInput::make('url_instagram')->url()->required()->label('Instagram URL'),
                         Forms\Components\TextInput::make('url_tiktok')->url()->required()->label('TikTok URL'),
                         Forms\Components\TextInput::make('url_youtube')->url()->required()->label('YouTube URL'),
                         Forms\Components\TextInput::make('url_facebook')->url()->required()->label('Facebook URL'),
-                        Forms\Components\Textarea::make('url_map')->required()->label('Google Maps Embed URL')->columnSpanFull(),
                     ])->columns(2),
 
                 Forms\Components\Section::make('Footer & Maklumat')
@@ -47,16 +46,6 @@ class ManageGeneralSettings extends SettingsPage
                             ->preserveFilenames()
                             ->label('Sertifikat Maklumat Pelayanan')
                             ->columnSpanFull(),
-                        Forms\Components\FileUpload::make('file_form_permohonan')
-                            ->label('File Form Permohonan Informasi (PDF)')
-                            ->acceptedFileTypes(['application/pdf'])
-                            ->directory('formulir')
-                            ->preserveFilenames(),
-                        Forms\Components\FileUpload::make('file_form_keberatan')
-                            ->label('File Form Pernyataan Keberatan (PDF)')
-                            ->acceptedFileTypes(['application/pdf'])
-                            ->directory('formulir')
-                            ->preserveFilenames(),
                     ]),
             ]);
     }

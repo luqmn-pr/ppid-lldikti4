@@ -34,7 +34,7 @@
                 <span class="inline-block text-xs font-bold text-secondary uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full mb-4">Tentang PPID</span>
                 <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800 mb-6 leading-snug">Komitmen Keterbukaan<br>Informasi Publik</h2>
                 <div class="space-y-5 text-[15px] text-slate-600 leading-[1.85]">
-                    <p>{{ $profil->tentang_ppid }}</p>
+                    <div>{!! nl2br(e($profil->tentang_ppid)) !!}</div>
                     @if($profil->visi)
                     <div class="mt-4 p-4 bg-blue-50 border-l-4 border-primary rounded-r-xl">
                         <h4 class="font-bold text-primary mb-1">Visi</h4>
@@ -132,11 +132,11 @@
                         <i class="ph-fill ph-clipboard-text text-2xl text-slate-500"></i>
                     </div>
                     <h3 class="text-base font-extrabold text-slate-800 uppercase tracking-wide">Tugas PPID</h3>
-                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->tugas_fungsi) }} tugas pokok pengelolaan informasi</p>
+                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->tugas_fungsi ?? []) }} tugas pokok pengelolaan informasi</p>
                 </div>
                 <div class="px-8 py-6">
                     <ul class="space-y-3.5">
-                        @foreach($profil->tugas_fungsi as $index => $tugas)
+                        @foreach($profil->tugas_fungsi ?? [] as $index => $tugas)
                         <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
                             <span class="mt-1 w-5 h-5 rounded-full bg-secondary/15 text-secondary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">{{ $index + 1 }}</span>
                             <span>{{ $tugas['teks'] }}</span>
@@ -153,11 +153,11 @@
                         <i class="ph-fill ph-shield-check text-2xl text-slate-500"></i>
                     </div>
                     <h3 class="text-base font-extrabold text-slate-800 uppercase tracking-wide">Wewenang PPID</h3>
-                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->wewenang) }} kewenangan dalam pengelolaan informasi</p>
+                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->wewenang ?? []) }} kewenangan dalam pengelolaan informasi</p>
                 </div>
                 <div class="px-8 py-6">
                     <ul class="space-y-3.5">
-                        @foreach($profil->wewenang as $index => $wew)
+                        @foreach($profil->wewenang ?? [] as $index => $wew)
                         <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
                             <span class="mt-1 w-5 h-5 rounded-full bg-primary/10 text-primary flex items-center justify-center flex-shrink-0 text-[10px] font-bold">{{ $index + 1 }}</span>
                             <span>{{ $wew['teks'] }}</span>
@@ -174,11 +174,11 @@
                         <i class="ph-fill ph-users-three text-2xl text-slate-500"></i>
                     </div>
                     <h3 class="text-base font-extrabold text-slate-800 uppercase tracking-wide">Tim Pertimbangan PPID</h3>
-                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->tim_pertimbangan) }} tugas tim pertimbangan</p>
+                    <p class="text-xs text-slate-400 mt-1">{{ count($profil->tim_pertimbangan ?? []) }} tugas tim pertimbangan</p>
                 </div>
                 <div class="px-8 py-6">
                     <ul class="space-y-3.5">
-                        @foreach($profil->tim_pertimbangan as $index => $tim)
+                        @foreach($profil->tim_pertimbangan ?? [] as $index => $tim)
                         <li class="flex items-start gap-3 text-sm text-slate-600 leading-relaxed">
                             <span class="mt-1 w-5 h-5 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center flex-shrink-0 text-[10px] font-bold">{{ $index + 1 }}</span>
                             <span>{{ $tim['teks'] }}</span>
@@ -188,6 +188,26 @@
                 </div>
             </div>
 
+        </div>
+
+        <!-- Divider -->
+        <div class="flex items-center gap-4 mb-16">
+            <div class="flex-1 h-px bg-slate-100"></div>
+            <div class="flex-shrink-0">
+                <span class="text-xs font-bold text-slate-400 uppercase tracking-widest px-4">Struktur Organisasi</span>
+            </div>
+            <div class="flex-1 h-px bg-slate-100"></div>
+        </div>
+
+        <!-- ===== SECTION 4: Struktur PPID ===== -->
+        <div class="text-center mb-12">
+            <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800 mb-8">Struktur PPID</h2>
+            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-12 max-w-2xl mx-auto flex flex-col items-center justify-center min-h-[200px]">
+                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
+                    <i class="ph ph-hourglass-high text-2xl text-slate-400"></i>
+                </div>
+                <p class="text-slate-600 font-medium text-lg">Menunggu pengesahan SK PPID yang terbaru</p>
+            </div>
         </div>
 
     </div>

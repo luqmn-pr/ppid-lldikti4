@@ -26,8 +26,12 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-slate-100 rounded-3xl p-2 border border-slate-200 shadow-inner h-[800px] relative overflow-hidden group">
             <!-- PDF Viewer Placeholder -->
-            <iframe src="{{ asset('assets/docs/daftar-informasi-publik.pdf') }}" class="w-full h-full rounded-2xl bg-white relative z-10" title="Daftar Informasi Publik PDF">
-            </iframe>
+            @php $general = app(\App\Settings\GeneralSettings::class); @endphp
+            @if($general->file_daftar_informasi_publik)
+                <iframe src="{{ asset('storage/' . $general->file_daftar_informasi_publik) }}" class="w-full h-full rounded-2xl bg-white relative z-10" title="Daftar Informasi Publik PDF"></iframe>
+            @else
+                <iframe src="{{ asset('assets/docs/daftar-informasi-publik.pdf') }}" class="w-full h-full rounded-2xl bg-white relative z-10" title="Daftar Informasi Publik PDF"></iframe>
+            @endif
             
             <!-- Fallback visual if no local PDF exists -->
             <div class="absolute inset-0 flex flex-col items-center justify-center bg-white rounded-2xl z-0 pointer-events-none">
@@ -38,9 +42,15 @@
         </div>
         
         <div class="mt-6 flex justify-center">
-            <a href="{{ asset('assets/docs/daftar-informasi-publik.pdf') }}" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 transition-all hover:-translate-y-1">
-                <i class="ph-bold ph-download-simple text-xl"></i> Unduh Dokumen
-            </a>
+            @if($general->file_daftar_informasi_publik)
+                <a href="{{ asset('storage/' . $general->file_daftar_informasi_publik) }}" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 transition-all hover:-translate-y-1">
+                    <i class="ph-bold ph-download-simple text-xl"></i> Unduh Dokumen
+                </a>
+            @else
+                <a href="{{ asset('assets/docs/daftar-informasi-publik.pdf') }}" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-bold shadow-lg shadow-primary/20 transition-all hover:-translate-y-1">
+                    <i class="ph-bold ph-download-simple text-xl"></i> Unduh Dokumen
+                </a>
+            @endif
         </div>
     </div>
 </div>

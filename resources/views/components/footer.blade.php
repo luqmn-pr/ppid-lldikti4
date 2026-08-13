@@ -1,83 +1,121 @@
 @php
     $general = app(\App\Settings\GeneralSettings::class);
-    $tautans = \App\Models\TautanPenting::orderBy('urutan')->get();
 @endphp
-<footer class="bg-primary-dark text-blue-100 pt-8 pb-4 px-6 relative overflow-hidden mt-8">
-    <div class="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-secondary via-white to-secondary"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-6">
-            
-            <div class="md:col-span-5">
-                <div class="flex items-center gap-3 mb-3">
-                    <img src="{{ asset('storage/handayani.png') }}" alt="Tut Wuri Handayani" class="h-10 w-auto">
-                    <div class="flex flex-col">
-                        <span class="text-base font-bold text-white leading-tight">Lembaga Layanan</span>
-                        <span class="text-base font-bold text-white leading-tight">Pendidikan Tinggi Wilayah IV</span>
+<footer style="background:#1e3a5f; color:#bfdbfe; padding-top:2.5rem; padding-bottom:1rem; position:relative; overflow:hidden; margin-top:2rem;">
+    <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(to right, #f97316, #fff, #f97316);"></div>
+    <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
+
+        {{-- Main row --}}
+        <div style="display:flex; flex-wrap:wrap; gap:2.5rem; margin-bottom:2rem;">
+
+            {{-- Kiri: Logo + Sosmed --}}
+            <div style="flex:0 0 280px; min-width:220px;">
+                <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
+                    <img src="{{ asset('storage/handayani.png') }}" alt="Logo" style="height:40px; width:auto;">
+                    <div>
+                        <div style="color:#fff; font-weight:700; font-size:0.95rem; line-height:1.3;">Lembaga Layanan</div>
+                        <div style="color:#fff; font-weight:700; font-size:0.95rem; line-height:1.3;">Pendidikan Tinggi Wilayah IV</div>
                     </div>
                 </div>
-                <p class="text-xs text-blue-200 mb-4 leading-relaxed max-w-sm">
-                    {{ $general->footer_description ?: 'Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah IV memfasilitasi peningkatan mutu penyelenggaraan pendidikan tinggi di Provinsi Jawa Barat dan Banten.' }}
+                <p style="color:#bfdbfe; font-size:0.75rem; line-height:1.7; margin-bottom:1.25rem; max-width:260px;">
+                    {{ $general->footer_description ?: 'LLDIKTI Wilayah IV memfasilitasi peningkatan mutu penyelenggaraan pendidikan tinggi di Provinsi Jawa Barat dan Banten.' }}
                 </p>
-                <div class="flex gap-2">
+                <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
                     @if($general->url_instagram)
-                    <a href="{{ $general->url_instagram }}" target="_blank" title="Instagram" class="w-7 h-7 rounded-full bg-primary flex items-center justify-center hover:bg-secondary text-white transition-all">
-                        <i class="fa-brands fa-instagram text-xs"></i>
+                    <a href="{{ $general->url_instagram }}" target="_blank" title="Instagram" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                        <i class="fa-brands fa-instagram" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                     @if($general->url_tiktok)
-                    <a href="{{ $general->url_tiktok }}" target="_blank" title="Tiktok" class="w-7 h-7 rounded-full bg-primary flex items-center justify-center hover:bg-secondary text-white transition-all">
-                        <i class="fa-brands fa-tiktok text-xs"></i>
+                    <a href="{{ $general->url_tiktok }}" target="_blank" title="TikTok" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                        <i class="fa-brands fa-tiktok" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                     @if($general->url_youtube)
-                    <a href="{{ $general->url_youtube }}" target="_blank" title="Youtube" class="w-7 h-7 rounded-full bg-primary flex items-center justify-center hover:bg-secondary text-white transition-all">
-                        <i class="fa-brands fa-youtube text-xs"></i>
+                    <a href="{{ $general->url_youtube }}" target="_blank" title="YouTube" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                        <i class="fa-brands fa-youtube" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                     @if($general->url_facebook)
-                    <a href="{{ $general->url_facebook }}" target="_blank" title="Facebook" class="w-7 h-7 rounded-full bg-primary flex items-center justify-center hover:bg-secondary text-white transition-all">
-                        <i class="fa-brands fa-facebook-f text-xs"></i>
+                    <a href="{{ $general->url_facebook }}" target="_blank" title="Facebook" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                        <i class="fa-brands fa-facebook-f" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                 </div>
             </div>
-            
-            <div class="md:col-span-3">
-                <h4 class="text-white font-bold mb-3 tracking-wide text-sm">Tautan Penting</h4>
-                <ul class="space-y-2 text-xs">
-                    @foreach($tautans as $tautan)
-                    <li><a href="{{ $tautan->url_tautan }}" target="_blank" class="hover:text-secondary transition-colors flex items-center gap-1.5"><i class="ph ph-arrow-right text-blue-400"></i> {{ $tautan->judul_tautan }}</a></li>
-                    @endforeach
-                </ul>
-            </div>
-            
-            <div class="md:col-span-4">
-                <h4 class="text-white font-bold mb-3 tracking-wide text-sm">Lokasi Kami</h4>
-                <a href="{{ $general->url_map }}" target="_blank" class="block w-full h-24 rounded-xl overflow-hidden border border-blue-800 opacity-90 hover:opacity-100 transition-opacity relative group">
-                    <img src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/191:100/w_1280,c_limit/GoogleMapTA.jpg" alt="Map" class="w-full h-full object-cover">
-                    <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-primary/40 backdrop-blur-sm">
-                        <span class="bg-white text-primary px-3 py-1.5 rounded-full font-bold text-xs shadow-lg flex items-center gap-1.5">
-                            <i class="ph-fill ph-map-pin"></i> Lihat Peta
-                        </span>
+
+            {{-- Garis pemisah --}}
+            <div style="width:1px; background:rgba(255,255,255,0.1); align-self:stretch; flex-shrink:0;"></div>
+
+            {{-- Kanan: Informasi Pelayanan --}}
+            <div style="flex:1; min-width:300px;">
+                <div style="color:#fff; font-weight:700; font-size:0.85rem; margin-bottom:1rem; padding-bottom:0.6rem; border-bottom:1px solid rgba(255,255,255,0.1); letter-spacing:0.05em;">
+                    Informasi Pelayanan
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem;">
+
+                    {{-- Alamat --}}
+                    <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                        <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                            <i class="ph-fill ph-map-pin" style="color:#93c5fd; font-size:1rem;"></i>
+                        </div>
+                        <div>
+                            <p style="color:#fff; font-size:0.72rem; font-weight:600; margin:0 0 4px;">Alamat Kantor</p>
+                            <p style="color:#bfdbfe; font-size:0.72rem; line-height:1.6; margin:0;">{{ $general->alamat_kantor }}</p>
+                        </div>
                     </div>
-                </a>
+
+                    {{-- Waktu --}}
+                    <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                        <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                            <i class="ph-fill ph-clock" style="color:#93c5fd; font-size:1rem;"></i>
+                        </div>
+                        <div>
+                            <p style="color:#fff; font-size:0.72rem; font-weight:600; margin:0 0 4px;">Waktu Pelayanan</p>
+                            <p style="color:#bfdbfe; font-size:0.72rem; line-height:1.6; margin:0;">{{ $general->waktu_pelayanan }}</p>
+                        </div>
+                    </div>
+
+                    {{-- Kontak --}}
+                    <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                        <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                            <i class="ph-fill ph-phone" style="color:#93c5fd; font-size:1rem;"></i>
+                        </div>
+                        <div>
+                            <p style="color:#fff; font-size:0.72rem; font-weight:600; margin:0 0 4px;">Kontak Cepat</p>
+                            <p style="color:#bfdbfe; font-size:0.72rem; line-height:1.6; margin:0;">
+                                ULT: {{ $general->kontak_telepon }}<br>
+                                WA: {{ $general->kontak_whatsapp }}
+                            </p>
+                        </div>
+                    </div>
+
+                    {{-- Email --}}
+                    <div style="display:flex; align-items:flex-start; gap:0.75rem;">
+                        <div style="width:32px;height:32px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                            <i class="ph-fill ph-envelope-simple" style="color:#93c5fd; font-size:1rem;"></i>
+                        </div>
+                        <div>
+                            <p style="color:#fff; font-size:0.72rem; font-weight:600; margin:0 0 4px;">Email Resmi</p>
+                            <a href="mailto:{{ $general->email_resmi }}" style="color:#bfdbfe; font-size:0.72rem; text-decoration:none; transition:color .2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#bfdbfe'">{{ $general->email_resmi }}</a>
+                        </div>
+                    </div>
+
+                </div>
             </div>
-            
+
         </div>
-        
-        <div class="border-t border-blue-900/50 pt-4 flex flex-col md:flex-row justify-between items-center gap-2">
-            <p class="text-xs text-blue-200/80 m-0">
+
+        {{-- Bottom bar --}}
+        <div style="border-top:1px solid rgba(255,255,255,0.08); padding-top:1rem; display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:0.75rem;">
+            <p style="color:rgba(191,219,254,0.7); font-size:0.72rem; margin:0;">
                 Copyright &copy; {{ date('Y') }} Lembaga Layanan Pendidikan Tinggi (LLDIKTI) Wilayah IV Jawa Barat dan Banten
             </p>
-            <div class="text-xs text-blue-200/80 space-x-3">
-                <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
-                <a href="#" class="hover:text-white transition-colors">Syarat Ketentuan</a>
-                @auth
-                    <a href="{{ url('/admin') }}" class="hover:text-secondary transition-colors font-medium">Dashboard Admin</a>
-                @else
-                    <a href="{{ url('/admin') }}" class="hover:text-secondary transition-colors font-medium">Login Admin</a>
-                @endauth
+            <div style="display:flex; gap:1rem; font-size:0.72rem; color:rgba(191,219,254,0.7);">
+                <a href="#" style="color:rgba(191,219,254,0.7); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(191,219,254,0.7)'">Kebijakan Privasi</a>
+                <a href="#" style="color:rgba(191,219,254,0.7); text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='rgba(191,219,254,0.7)'">Syarat Ketentuan</a>
             </div>
         </div>
+
     </div>
 </footer>

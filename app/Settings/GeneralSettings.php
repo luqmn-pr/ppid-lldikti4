@@ -17,13 +17,13 @@ class GeneralSettings extends Settings
     public string $url_tiktok;
     public string $url_youtube;
     public string $url_facebook;
-    public string $url_map;
 
     public string $footer_description;
     public ?string $maklumat_image;
     
     public ?string $file_form_permohonan;
     public ?string $file_form_keberatan;
+    public ?string $file_daftar_informasi_publik;
 
     public static function group(): string
     {

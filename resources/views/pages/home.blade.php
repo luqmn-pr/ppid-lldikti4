@@ -68,9 +68,10 @@
                 <a href="https://empat.lldikti4.id/login" target="_blank" class="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-lg font-semibold text-sm transition-colors shadow-md shadow-primary/20">
                     Ajukan Permohonan <i class="ph ph-arrow-up-right text-xs"></i>
                 </a>
-                <div class="text-right">
-                    <p class="text-2xl font-bold text-primary leading-none">{{ $hero->stats_count ?? '65' }}+</p>
-                    <p class="text-slate-400 text-xs mt-1">{{ $hero->stats_label ?? 'Dokumen tersedia' }}</p>
+                <div style="background:#fff; border:1px solid #e8edf5; border-radius:16px; box-shadow:0 4px 24px rgba(30,58,120,0.08), 0 1px 4px rgba(30,58,120,0.04); padding:1.25rem 1.75rem; text-align:center; min-width:140px;">
+                    <p style="font-size:2.75rem; font-weight:900; line-height:1; letter-spacing:-1px; color:#1e3a8a; margin:0;">{{ $hero->stats_count ?? '65' }}<span style="color:#f97316;">+</span></p>
+                    <p style="font-size:0.8rem; font-weight:700; color:#334155; margin:0.5rem 0 0.2rem;">{{ $hero->stats_label ?? 'Pemohon' }}</p>
+                    <p style="font-size:0.68rem; color:#94a3b8; letter-spacing:0.08em; margin:0;">{{ $hero->stats_description ?? '2022 – 2025' }}</p>
                 </div>
             </div>
         </div>
@@ -160,94 +161,5 @@
     </div>
 </div>
 
-<!-- Informasi & Layanan Kontak -->
-<div class="py-20 border-t border-slate-100" style="background: linear-gradient(135deg, #f0f4ff 0%, #f8faff 50%, #fff7ee 100%);">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8" style="align-items: stretch;">
-            <!-- Left: Lapor Aplikasi -->
-            <div class="lg:col-span-4 flex flex-col" style="min-height: 100%;">
-                <span class="text-secondary font-bold tracking-widest text-sm uppercase mb-2">Aplikasi Terkait</span>
-                <h2 class="text-3xl font-extrabold text-slate-800 mb-3">Kanal Pengaduan Resmi</h2>
-                <p class="text-slate-500 mb-6 leading-relaxed text-sm">Sampaikan aspirasi dan pengaduan langsung melalui platform pengaduan nasional yang terintegrasi.</p>
 
-                <div class="flex-1 rounded-2xl overflow-hidden shadow-lg flex flex-col border border-rose-100"
-                    style="background-color: #fff5f5; border-left: 4px solid #e11d48;">
-                    <div class="flex-1 flex flex-col items-center justify-center px-6 py-8">
-                        <img src="https://www.lapor.go.id/themes/lapor/assets/images/logo.png" alt="Logo LAPOR!" class="h-12 w-auto object-contain mb-3">
-                        <p class="text-rose-400 text-xs text-center leading-relaxed">Layanan Aspirasi dan Pengaduan Online Rakyat</p>
-                    </div>
-                    <div class="h-px bg-rose-100 mx-6"></div>
-                    <div class="px-6 py-5">
-                        <a href="{{ $general->url_lapor }}" target="_blank" class="flex items-center justify-between bg-[#e11d48] hover:bg-rose-700 text-white px-5 py-3 rounded-xl font-bold transition-all text-sm group shadow-md shadow-rose-200">
-                            <span>Akses Website LAPOR!</span>
-                            <i class="ph-bold ph-arrow-up-right group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Right: Info Pelayanan -->
-            <div class="lg:col-span-8 flex flex-col" style="min-height: 100%;">
-                <div class="bg-white rounded-3xl shadow-xl shadow-slate-200/50 border border-slate-100 overflow-hidden flex-1 flex flex-col">
-                    <div class="px-8 py-5 border-b border-slate-100 flex items-center gap-3 bg-primary/5">
-                        <div class="w-9 h-9 bg-primary/10 rounded-lg flex items-center justify-center">
-                            <i class="ph-fill ph-headset text-primary text-lg"></i>
-                        </div>
-                        <h3 class="text-base font-bold text-slate-800">Informasi Pelayanan</h3>
-                    </div>
-
-                    <div class="divide-y divide-slate-100">
-                        <!-- Alamat -->
-                        <div class="flex items-start gap-4 px-8 py-5 hover:bg-blue-50/30 transition-colors">
-                            <div class="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="ph-fill ph-map-pin text-lg"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <h4 class="font-semibold text-slate-700 text-sm mb-0.5">Alamat Kantor</h4>
-                                <p class="text-sm text-slate-500 leading-relaxed">{{ $general->alamat_kantor }}</p>
-                            </div>
-                        </div>
-
-                        <!-- Waktu -->
-                        <div class="flex items-start gap-4 px-8 py-5 hover:bg-orange-50/30 transition-colors">
-                            <div class="w-10 h-10 bg-orange-50 text-secondary rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="ph-fill ph-clock text-lg"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <h4 class="font-semibold text-slate-700 text-sm mb-0.5">Waktu Pelayanan</h4>
-                                <p class="text-sm text-slate-500">{{ $general->waktu_pelayanan }}</p>
-                            </div>
-                        </div>
-
-                        <!-- Telepon -->
-                        <div class="flex items-start gap-4 px-8 py-5 hover:bg-emerald-50/30 transition-colors">
-                            <div class="w-10 h-10 bg-emerald-50 text-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="ph-fill ph-phone text-lg"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <h4 class="font-semibold text-slate-700 text-sm mb-0.5">Kontak Cepat</h4>
-                                <p class="text-sm text-slate-500">
-                                    <span class="font-medium text-slate-600">ULT:</span> {{ $general->kontak_telepon }} &nbsp;|&nbsp;
-                                    <span class="font-medium text-slate-600">WhatsApp:</span> {{ $general->kontak_whatsapp }}
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="flex items-start gap-4 px-8 py-5 hover:bg-blue-50/30 transition-colors">
-                            <div class="w-10 h-10 bg-blue-50 text-primary rounded-xl flex items-center justify-center flex-shrink-0 mt-0.5">
-                                <i class="ph-fill ph-envelope-simple text-lg"></i>
-                            </div>
-                            <div class="min-w-0">
-                                <h4 class="font-semibold text-slate-700 text-sm mb-0.5">Email Resmi</h4>
-                                <a href="mailto:{{ $general->email_resmi }}" class="text-sm text-primary font-medium hover:underline">{{ $general->email_resmi }}</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
 @endsection

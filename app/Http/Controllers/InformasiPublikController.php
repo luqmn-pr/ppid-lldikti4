@@ -20,11 +20,6 @@ class InformasiPublikController extends Controller
         return view('pages.daftar-informasi-publik');
     }
 
-    public function maklumat()
-    {
-        return view('pages.maklumat-pelayanan');
-    }
-
     public function rekapitulasi()
     {
         $rekapitulasis = \App\Models\Rekapitulasi::orderBy('tahun', 'desc')->get();

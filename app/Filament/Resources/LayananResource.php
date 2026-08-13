@@ -19,7 +19,7 @@ class LayananResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-folder';
     protected static ?string $navigationGroup = 'Master Data';
-    protected static ?string $pluralModelLabel = 'Layanan & Kartu';
+    protected static ?string $pluralModelLabel = 'Kartu Layanan';
 
     public static function form(Form $form): Form
     {

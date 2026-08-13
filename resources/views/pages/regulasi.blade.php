@@ -21,82 +21,86 @@
 
 <!-- Content Section -->
 <div class="py-16 bg-white min-h-[50vh]">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <!-- Table Card -->
-        <div class="bg-white rounded-2xl border border-slate-200 overflow-hidden shadow-sm">
-            <!-- Table Header Bar -->
-            <div class="flex items-center justify-between px-6 py-4 border-b border-slate-100 bg-slate-50/60">
-                <div class="flex items-center gap-3">
-                    <div class="w-8 h-8 bg-primary/10 rounded-lg flex items-center justify-center">
-                        <i class="ph-fill ph-book-open text-primary text-base"></i>
-                    </div>
-                    <div>
-                        <p class="font-bold text-slate-800 text-sm">Daftar Regulasi</p>
-                        <p class="text-xs text-slate-400">{{ $regulasis->count() }} peraturan tersedia</p>
-                    </div>
-                </div>
-                <span class="text-xs text-slate-400 font-medium hidden sm:block">Klik <span class="font-bold text-primary">Unduh</span> untuk mengakses dokumen</span>
-            </div>
+        <p class="text-slate-700 text-base leading-relaxed mb-8">
+            Berikut adalah regulasi yang berkaitan dengan keterbukaan informasi publik:
+        </p>
 
-            <!-- Table -->
-            <div class="overflow-x-auto">
-                <table class="w-full text-left border-collapse">
-                    <thead>
-                        <tr class="bg-slate-50 text-[11px] font-bold text-slate-500 uppercase tracking-widest border-b border-slate-200">
-                            <th class="px-6 py-4 w-14 text-center">No</th>
-                            <th class="px-6 py-4 w-72">Judul</th>
-                            <th class="px-6 py-4">Sinopsis</th>
-                            <th class="px-6 py-4 w-28 text-center">Berkas</th>
-                        </tr>
-                    </thead>
-                    <tbody class="divide-y divide-slate-100">
-                        @forelse($regulasis as $index => $regulasi)
-                        <tr class="hover:bg-slate-50/80 transition-colors group">
-                            <td class="px-6 py-5 text-center">
-                                <span class="w-7 h-7 rounded-full {{ $index % 2 == 0 ? 'bg-primary text-white' : 'bg-slate-200 text-slate-600' }} text-xs font-bold flex items-center justify-center mx-auto">
-                                    {{ $index + 1 }}
-                                </span>
-                            </td>
-                            <td class="px-6 py-5">
-                                <p class="font-semibold text-slate-800 text-sm leading-snug">{{ $regulasi->judul }}</p>
-                            </td>
-                            <td class="px-6 py-5">
-                                <p class="text-sm text-slate-600 leading-relaxed">{{ $regulasi->sinopsis }}</p>
-                            </td>
-                            <td class="px-6 py-5 text-center">
-                                @if($regulasi->file_pdf)
-                                <a href="{{ asset('storage/' . $regulasi->file_pdf) }}" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-primary/8 text-primary text-xs font-bold rounded-lg hover:bg-primary hover:text-white transition-all duration-200 group-hover:scale-105">
-                                    <i class="ph ph-download-simple"></i> Unduh
-                                </a>
-                                @elseif($regulasi->link_tautan)
-                                    @if($regulasi->jenis_tautan === 'drive')
-                                        <a href="{{ $regulasi->link_tautan }}" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-red-50 text-red-600 text-xs font-bold rounded-lg hover:bg-red-600 hover:text-white transition-all duration-200 group-hover:scale-105">
-                                            <i class="ph ph-file-pdf"></i> Lihat PDF
-                                        </a>
-                                    @else
-                                        <a href="{{ $regulasi->link_tautan }}" target="_blank" class="inline-flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 text-secondary text-xs font-bold rounded-lg hover:bg-secondary hover:text-white transition-all duration-200 group-hover:scale-105">
-                                            <i class="ph ph-arrow-square-out"></i> Tautan Web
-                                        </a>
-                                    @endif
-                                @else
-                                <span class="text-xs text-slate-400 italic">Tidak tersedia</span>
-                                @endif
-                            </td>
-                        </tr>
-                        @empty
-                        <tr>
-                            <td colspan="4" class="px-6 py-10 text-center text-slate-500">Belum ada data regulasi.</td>
-                        </tr>
-                        @endforelse
-                    </tbody>
-                </table>
+        <ol style="list-style: decimal; padding-left: 1.5rem;" class="space-y-5 mb-10 text-slate-700 text-base">
+            <li>
+                Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.
+                <a href="https://drive.google.com/file/d/1Or-yPwyy-Gv0rlopOnDxvGOlvhwvPetB/view" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                Peraturan Pemerintah Nomor 61 Tahun 2010 tentang Pelaksanaan Undang-Undang Keterbukaan Informasi Publik.
+                <a href="https://drive.google.com/file/d/1xLbub5z5GVt_ggBzBjLRTvpeBoyDcRWL/view?usp=drive_link" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                Peraturan Mahkamah Agung Nomor 2 Tahun 2011 tentang Tata Cara Penyelesaian Sengketa Informasi Publik di Pengadilan.
+                <a href="https://drive.google.com/file/d/1rQryfzAQhfBdr_peUVTHQjydCydE3xWd/view" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                Peraturan Komisi Informasi Nomor 1 Tahun 2013 tentang Prosedur Penyelesaian Sengketa Informasi Publik.
+                <a href="https://drive.google.com/file/d/1niHtYdIQmXQZlX8kUfIitSzHxTrGoRmc/view?usp=drive_link" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                Peraturan Komisi Informasi Pusat Nomor 1 Tahun 2021 tentang Standar Layanan Informasi Publik.
+                <a href="https://drive.google.com/file/d/1hEw8bLCVMROS-AM_dHnE_32MS1HRumx9/view" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+        </ol>
+
+        <p class="text-slate-700 text-base leading-relaxed mb-8">
+            Regulasi yang berkaitan dengan keterbukaan informasi publik di Kementerian Pendidikan Tinggi, Sains, dan Teknologi diatur dalam Peraturan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Nomor 69 Tahun 2024 tentang Pengelolaan dan Pelayanan Informasi Publik di Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.
+            <a href="https://drive.google.com/file/d/1BY_duIXl1hYn1Q6mhU8O18AiZ1_XiDor/view?usp=drivesdk" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+        </p>
+
+        <p class="text-slate-700 text-base leading-relaxed mb-10">
+            Adapun standar pelayanan permintaan informasi publik di Kementerian Pendidikan Tinggi, Sains, dan Teknologi diatur dalam Keputusan Kepala Biro Umum, Hubungan Masyarakat, dan Pengadaan Barang dan Jasa Nomor 0894/A5/OT.02.02/2025 tentang Standar Pelayanan Permintaan Informasi Publik Kementerian Pendidikan Tinggi, Sains, dan Teknologi.
+            <a href="https://drive.google.com/file/d/178QOHKcEUhLa-6NfGWaGpVK7qTZSIKPr/view?usp=drive_link" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+        </p>
+
+        <p class="text-slate-700 text-base leading-relaxed mb-8">
+            Lembaga Layanan Pendidikan Tinggi Wilayah IV juga telah memiliki prosedur operasional standar (POS) dalam pelayanan informasi publik meliputi:
+        </p>
+
+        <ol style="list-style: decimal; padding-left: 1.5rem;" class="space-y-5 mb-16 text-slate-700 text-base">
+            <li>
+                POS Layanan Permintaan Informasi Publik.
+                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                POS Layanan Keberatan Atas Permintaan Informasi Publik.
+                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                POS Pendokumentasian Informasi Publik.
+                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                POS Pemutakhiran dan Penetapan Daftar Informasi Publik.
+                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                POS Pengujian Konsekuensi dan Penetapan Informasi yang Dikecualikan.
+                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+            <li>
+                POS Pengumuman Informasi Publik.
+                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            </li>
+        </ol>
+
+        <!-- Tags -->
+        <div class="border-t border-slate-100 pt-8">
+            <div class="flex items-center gap-2 mb-4">
+                <i class="ph ph-tag text-slate-400"></i>
+                <span class="text-sm font-semibold text-slate-700">Tags:</span>
             </div>
-            
-            <!-- Table Footer -->
-            <div class="px-6 py-4 bg-slate-50/60 border-t border-slate-100 flex items-center justify-between">
-                <p class="text-xs text-slate-400">Menampilkan {{ $regulasis->count() }} regulasi</p>
-                <p class="text-xs text-slate-400">Terakhir diperbarui: {{ $regulasis->max('updated_at') ? $regulasis->max('updated_at')->format('d M Y') : '-' }}</p>
+            <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full font-medium">Informasi Publik</span>
+                <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full font-medium">Regulasi</span>
+                <span class="px-3 py-1 bg-slate-100 text-slate-600 text-sm rounded-full font-medium">Standar</span>
             </div>
         </div>
 
