@@ -27,6 +27,8 @@ class AdminPanelProvider extends PanelProvider
             ->id('admin')
             ->path(ltrim(env('APP_PREFIX', '') . '/admin', '/'))
             ->login()
+            ->brandName('PPID LLDIKTI IV')
+            ->favicon(fn () => rescue(fn () => app(\App\Settings\GeneralSettings::class)->favicon ? \Illuminate\Support\Facades\Storage::url(app(\App\Settings\GeneralSettings::class)->favicon) : asset('storage/handayani.png'), asset('storage/handayani.png')))
             ->colors([
                 'primary' => Color::Amber,
             ])
