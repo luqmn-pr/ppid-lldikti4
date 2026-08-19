@@ -19,6 +19,20 @@ class ManageGeneralSettings extends SettingsPage
     {
         return $form
             ->schema([
+                Forms\Components\Section::make('Logo & Favicon')
+                    ->schema([
+                        Forms\Components\FileUpload::make('site_logo')
+                            ->image()
+                            ->directory('settings')
+                            ->preserveFilenames()
+                            ->label('Logo Website (Navbar/Footer)'),
+                        Forms\Components\FileUpload::make('favicon')
+                            ->image()
+                            ->directory('settings')
+                            ->preserveFilenames()
+                            ->label('Favicon (Logo Tab Browser)'),
+                    ])->columns(2),
+
                 Forms\Components\Section::make('Informasi Kontak')
                     ->schema([
                         Forms\Components\Textarea::make('alamat_kantor')->required(),

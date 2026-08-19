@@ -11,7 +11,14 @@
             {{-- Kiri: Logo + Sosmed --}}
             <div style="flex:0 0 280px; min-width:220px;">
                 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                    <img src="{{ asset('storage/handayani.png') }}" alt="Logo" style="height:40px; width:auto;">
+                    @php
+                        $logo = $general->site_logo;
+                    @endphp
+                    @if($logo)
+                        <img src="{{ Storage::url($logo) }}" alt="Logo" style="height:40px; width:auto;">
+                    @else
+                        <img src="{{ asset('storage/handayani.png') }}" alt="Logo" style="height:40px; width:auto;">
+                    @endif
                     <div>
                         <div style="color:#fff; font-weight:700; font-size:0.95rem; line-height:1.3;">Lembaga Layanan</div>
                         <div style="color:#fff; font-weight:700; font-size:0.95rem; line-height:1.3;">Pendidikan Tinggi Wilayah IV</div>

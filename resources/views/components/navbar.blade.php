@@ -1,9 +1,16 @@
 <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center h-20">
-            <div class="flex-shrink-0 flex items-center gap-3">
-                <a href="{{ route('home') }}" class="flex items-center hover:opacity-90 transition-opacity">
-                    <img src="{{ asset('storage/logo-ppid.png') }}" alt="Logo PPID" class="h-10 w-auto">
+            <div class="flex-shrink-0">
+                <a href="{{ route('home') }}">
+                    @php
+                        $logo = app(\App\Settings\GeneralSettings::class)->site_logo;
+                    @endphp
+                    @if($logo)
+                        <img src="{{ Storage::url($logo) }}" alt="Logo PPID" class="h-10 w-auto object-contain">
+                    @else
+                        <span class="font-bold text-xl text-blue-900">PPID LLDIKTI IV</span>
+                    @endif
                 </a>
             </div>
             

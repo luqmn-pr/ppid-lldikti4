@@ -7,6 +7,15 @@
 
     <title>@yield('title', 'PPID LLDIKTI Wilayah IV')</title>
 
+    @php
+        $favicon = app(\App\Settings\GeneralSettings::class)->favicon;
+    @endphp
+    @if($favicon)
+        <link rel="icon" type="image/x-icon" href="{{ Storage::url($favicon) }}">
+    @else
+        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    @endif
+
     {{-- Phosphor Icons --}}
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
