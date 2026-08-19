@@ -8,9 +8,6 @@ use App\Http\Controllers\InformasiPublikController;
 use App\Http\Controllers\TataCaraController;
 
 
-$prefix = env('APP_PREFIX', '');
-
-Route::prefix($prefix)->group(function () {
     Route::get('/debug-php', function () {
         return [
             'php_ini' => php_ini_loaded_file(),
@@ -46,4 +43,3 @@ Route::prefix($prefix)->group(function () {
             'pdf_file' => app(\App\Settings\GeneralSettings::class)->file_form_keberatan
         ]);
     })->name('formulir.keberatan');
-});
