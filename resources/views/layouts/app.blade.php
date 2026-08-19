@@ -13,7 +13,7 @@
     @if($favicon)
         <link rel="icon" type="image/x-icon" href="{{ Storage::url($favicon) }}">
     @else
-        <link rel="icon" type="image/x-icon" href="/favicon.ico">
+        <link rel="icon" type="image/png" href="{{ asset('storage/handayani.png') }}">
     @endif
 
     {{-- Phosphor Icons --}}

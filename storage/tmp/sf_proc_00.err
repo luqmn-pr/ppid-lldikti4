@@ -1,0 +1,276 @@
+[Wed Aug 19 13:36:47 2026] PHP 8.3.33 Development Server (http://127.0.0.1:8000) started
+[Wed Aug 19 13:36:58 2026] 127.0.0.1:57481 Accepted
+[Wed Aug 19 13:36:59 2026] 127.0.0.1:57481 Closing
+[Wed Aug 19 13:36:59 2026] 127.0.0.1:54782 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:54782 [200]: GET /build/assets/app-sbGMVjw4.css
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:54782 Closing
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:51189 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:51189 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:51189 Closing
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:56647 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:57258 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:56647 [200]: GET /storage/logo-ppid.png
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:57258 Closing
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:56647 Closing
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:53048 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:53048 [200]: GET /storage/Maklumat-Pelayanan-PAKTA-INTEGRITAS-2025-REV-1.png
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:61686 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:61686 [200]: GET /storage/handayani.png
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:53048 Closing
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:61686 Closing
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:57197 Accepted
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:57197 [200]: GET /favicon.ico
+[Wed Aug 19 13:37:00 2026] 127.0.0.1:57197 Closing
+[Wed Aug 19 13:37:01 2026] 127.0.0.1:54694 Accepted
+[Wed Aug 19 13:37:01 2026] 127.0.0.1:63899 Accepted
+[Wed Aug 19 13:37:01 2026] 127.0.0.1:63899 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:37:01 2026] 127.0.0.1:63899 Closing
+[Wed Aug 19 13:37:01 2026] 127.0.0.1:63648 Accepted
+[Wed Aug 19 13:37:05 2026] 127.0.0.1:54694 Closing
+[Wed Aug 19 13:37:05 2026] 127.0.0.1:61313 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:61313 [200]: GET /build/assets/app-sbGMVjw4.css
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:61313 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:58763 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:51633 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:52288 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:58763 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:51633 [200]: GET /storage/logo-ppid.png
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:52288 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:56126 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:56045 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:56126 [200]: GET /storage/Maklumat-Pelayanan-PAKTA-INTEGRITAS-2025-REV-1.png
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:58763 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:56045 [200]: GET /storage/handayani.png
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:51633 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:56126 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:56045 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:63648 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:63648 Closing
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:54525 Accepted
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:54525 [200]: GET /favicon.ico
+[Wed Aug 19 13:37:06 2026] 127.0.0.1:54525 Closing
+[Wed Aug 19 13:37:07 2026] 127.0.0.1:62120 Accepted
+[Wed Aug 19 13:38:09 2026] 127.0.0.1:62120 Closed without sending a request; it was probably just an unused speculative preconnection
+[Wed Aug 19 13:38:09 2026] 127.0.0.1:62120 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:54291 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:63884 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:54291 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:63884 [200]: GET /build/assets/app-sbGMVjw4.css
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:63884 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:61248 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:61248 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:61248 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:55632 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:55567 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:55632 [200]: GET /storage/logo-ppid.png
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:55567 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:53095 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:53095 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:55632 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:53095 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:61263 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:62737 Accepted
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:61263 [200]: GET /storage/Maklumat-Pelayanan-PAKTA-INTEGRITAS-2025-REV-1.png
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:62737 [200]: GET /storage/handayani.png
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:61263 Closing
+[Wed Aug 19 13:38:16 2026] 127.0.0.1:62737 Closing
+[Wed Aug 19 13:38:17 2026] 127.0.0.1:53482 Accepted
+[Wed Aug 19 13:38:17 2026] 127.0.0.1:55814 Accepted
+[Wed Aug 19 13:38:17 2026] 127.0.0.1:55814 [200]: GET /favicon.ico
+[Wed Aug 19 13:38:17 2026] 127.0.0.1:55814 Closing
+[Wed Aug 19 13:38:17 2026] 127.0.0.1:50879 Accepted
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:50879 Closing
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:52869 Accepted
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:52356 Accepted
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:52869 [200]: GET /build/assets/app-sbGMVjw4.css
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:52356 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:52869 Closing
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:52356 Closing
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:54424 Accepted
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:58174 Accepted
+[Wed Aug 19 13:38:18 2026] 127.0.0.1:54424 [200]: GET /storage/logo-ppid.png
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:58174 Closing
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:54424 Closing
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:62092 Accepted
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:62092 [200]: GET /storage/Maklumat-Pelayanan-PAKTA-INTEGRITAS-2025-REV-1.png
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:62092 Closing
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:63614 Accepted
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:62537 Accepted
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:63614 [200]: GET /storage/handayani.png
+[Wed Aug 19 13:38:19 2026] 127.0.0.1:63614 Closing
+[Wed Aug 19 13:38:21 2026] 127.0.0.1:62537 Closing
+[Wed Aug 19 13:38:21 2026] 127.0.0.1:52657 Accepted
+[Wed Aug 19 13:38:21 2026] 127.0.0.1:52657 [200]: GET /css/filament/forms/forms.css?v=3.3.54.0
+[Wed Aug 19 13:38:21 2026] 127.0.0.1:52657 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:56001 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:59522 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:50185 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:64246 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:59314 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:60815 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:56001 [200]: GET /css/filament/support/support.css?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:59522 [200]: GET /css/filament/filament/app.css?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:50185 [200]: GET /js/filament/notifications/notifications.js?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:64246 [200]: GET /js/filament/support/support.js?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:59314 [200]: GET /js/filament/filament/echo.js?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:60815 [200]: GET /js/filament/filament/app.js?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:56001 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:59522 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:50185 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:59314 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:64246 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:60815 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:64920 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:64920 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:53482 [200]: GET /js/filament/notifications/notifications.js?v=3.3.54.0
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:53482 Closing
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:56484 Accepted
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:56484 [200]: GET /favicon.ico
+[Wed Aug 19 13:38:22 2026] 127.0.0.1:56484 Closing
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:64004 Accepted
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:50701 Accepted
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:55278 Accepted
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:64004 [200]: GET /js/filament/support/support.js?v=3.3.54.0
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:50701 [200]: GET /js/filament/filament/echo.js?v=3.3.54.0
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:55278 [200]: GET /js/filament/filament/app.js?v=3.3.54.0
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:64004 Closing
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:50701 Closing
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:55278 Closing
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:49205 Accepted
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:49205 Closing
+[Wed Aug 19 13:38:23 2026] 127.0.0.1:52942 Accepted
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:52942 Closing
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:63769 Accepted
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:51182 Accepted
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:63769 Closing
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:56349 Accepted
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:51182 [200]: GET /css/filament/forms/forms.css?v=3.3.54.0
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:51182 Closing
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:56349 [200]: GET /css/filament/support/support.css?v=3.3.54.0
+[Wed Aug 19 13:38:31 2026] 127.0.0.1:56349 Closing
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:59761 Accepted
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:62801 Accepted
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:59761 [200]: GET /css/filament/filament/app.css?v=3.3.54.0
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:62801 [200]: GET /js/filament/notifications/notifications.js?v=3.3.54.0
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:59761 Closing
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:62801 Closing
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:62985 Accepted
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:64568 Accepted
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:55651 Accepted
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:62985 [200]: GET /js/filament/support/support.js?v=3.3.54.0
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:64568 [200]: GET /js/filament/filament/echo.js?v=3.3.54.0
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:55651 [200]: GET /js/filament/filament/app.js?v=3.3.54.0
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:62985 Closing
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:64568 Closing
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:55651 Closing
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:60181 Accepted
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:60181 [200]: GET /favicon.ico
+[Wed Aug 19 13:38:32 2026] 127.0.0.1:60181 Closing
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:49177 Accepted
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59615 Accepted
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59170 Accepted
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59331 Accepted
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:49177 [200]: GET /js/filament/notifications/notifications.js?v=3.3.54.0
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59615 [200]: GET /js/filament/support/support.js?v=3.3.54.0
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59170 [200]: GET /js/filament/filament/echo.js?v=3.3.54.0
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59331 [200]: GET /js/filament/filament/app.js?v=3.3.54.0
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:49177 Closing
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59170 Closing
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59331 Closing
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:59615 Closing
+[Wed Aug 19 13:38:33 2026] 127.0.0.1:64796 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:59377 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:59377 Closing
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:61629 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:56435 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:61629 [200]: GET /css/filament/forms/forms.css?v=3.3.54.0
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:61629 Closing
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:56435 [200]: GET /css/filament/support/support.css?v=3.3.54.0
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:56435 Closing
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:60261 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:49669 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:56568 Accepted
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:60261 [200]: GET /css/filament/filament/app.css?v=3.3.54.0
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:49669 [200]: GET /js/filament/notifications/notifications.js?v=3.3.54.0
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:56568 [200]: GET /js/filament/support/support.js?v=3.3.54.0
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:60261 Closing
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:49669 Closing
+[Wed Aug 19 13:38:38 2026] 127.0.0.1:56568 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:57119 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:57225 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:57119 [200]: GET /js/filament/filament/echo.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:57225 [200]: GET /js/filament/filament/app.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:57119 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:57225 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:64796 [200]: GET /js/filament/notifications/notifications.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:64796 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:54321 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:54321 [200]: GET /js/filament/forms/components/textarea.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:54321 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53530 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:50193 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53530 [200]: GET /js/filament/forms/components/file-upload.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:50193 [200]: GET /favicon.ico
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:50193 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53530 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53937 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:61550 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:64430 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53308 Accepted
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53937 [200]: GET /js/filament/support/support.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:61550 [200]: GET /js/filament/filament/echo.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:64430 [200]: GET /js/filament/filament/app.js?v=3.3.54.0
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53937 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:61550 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:64430 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53308 Closing
+[Wed Aug 19 13:38:39 2026] 127.0.0.1:53580 Accepted
+[Wed Aug 19 13:38:40 2026] 127.0.0.1:53580 [200]: GET /js/filament/forms/components/textarea.js?v=3.3.54.0
+[Wed Aug 19 13:38:40 2026] 127.0.0.1:53580 Closing
+[Wed Aug 19 13:38:41 2026] 127.0.0.1:59012 Accepted
+[Wed Aug 19 13:38:41 2026] 127.0.0.1:59012 [200]: GET /js/filament/forms/components/file-upload.js?v=3.3.54.0
+[Wed Aug 19 13:38:41 2026] 127.0.0.1:59012 Closing
+[Wed Aug 19 13:39:02 2026] 127.0.0.1:50251 Accepted
+[Wed Aug 19 13:39:02 2026] 127.0.0.1:50251 Closing
+[Wed Aug 19 13:39:02 2026] 127.0.0.1:63029 Accepted
+[Wed Aug 19 13:39:02 2026] 127.0.0.1:63029 Closing
+[Wed Aug 19 13:39:02 2026] 127.0.0.1:52042 Accepted
+[Wed Aug 19 13:39:03 2026] 127.0.0.1:52042 Closing
+[Wed Aug 19 13:39:03 2026] 127.0.0.1:64401 Accepted
+[Wed Aug 19 13:39:04 2026] 127.0.0.1:64401 Closing
+[Wed Aug 19 13:39:05 2026] 127.0.0.1:61684 Accepted
+[Wed Aug 19 13:39:05 2026] 127.0.0.1:61684 Closing
+[Wed Aug 19 13:39:05 2026] 127.0.0.1:54039 Accepted
+[Wed Aug 19 13:39:05 2026] 127.0.0.1:54039 [200]: GET /storage/settings/Maklumat.png
+[Wed Aug 19 13:39:05 2026] 127.0.0.1:54039 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:55558 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57173 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:55558 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57173 [200]: GET /build/assets/app-sbGMVjw4.css
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57173 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:52421 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:52421 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:52421 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57328 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57574 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57328 [200]: GET /storage/settings/Maklumat.png
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57574 [200]: GET /storage/logo-ppid.png
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57328 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:57574 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:58143 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:55144 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:58143 [200]: GET /storage/Maklumat-Pelayanan-PAKTA-INTEGRITAS-2025-REV-1.png
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:55144 [200]: GET /storage/handayani.png
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:58143 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:55144 Closing
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:59356 Accepted
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:59356 [200]: GET /build/assets/app-BhX7AHlj.js
+[Wed Aug 19 13:39:09 2026] 127.0.0.1:59356 Closing
+[Wed Aug 19 13:39:10 2026] 127.0.0.1:51759 Accepted
+[Wed Aug 19 13:39:10 2026] 127.0.0.1:58780 Accepted
+[Wed Aug 19 13:39:10 2026] 127.0.0.1:58780 [200]: GET /favicon.ico
+[Wed Aug 19 13:39:10 2026] 127.0.0.1:58780 Closing
+[Wed Aug 19 13:39:10 2026] 127.0.0.1:60233 Accepted
+[Wed Aug 19 13:39:14 2026] 127.0.0.1:60233 Closing
+[Wed Aug 19 13:41:59 2026] 127.0.0.1:51759 Closed without sending a request; it was probably just an unused speculative preconnection
+[Wed Aug 19 13:41:59 2026] 127.0.0.1:51759 Closing
