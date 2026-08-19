@@ -19,6 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        if (env('APP_ENV') === 'production') {
+            \Illuminate\Support\Facades\URL::forceScheme('https');
+        }
+
         if ($prefix = env('APP_PREFIX')) {
             \Livewire\Livewire::setUpdateRoute(function ($handle) use ($prefix) {
                 return \Illuminate\Support\Facades\Route::post("/{$prefix}/livewire/update", $handle);
