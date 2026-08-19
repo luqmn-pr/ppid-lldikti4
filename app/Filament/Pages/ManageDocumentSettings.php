@@ -19,21 +19,21 @@ class ManageDocumentSettings extends SettingsPage
     {
         return $form
             ->schema([
-                Forms\Components\Section::make('Upload Dokumen PDF')
+                Forms\Components\Section::make('Upload Dokumen')
                     ->schema([
                         Forms\Components\FileUpload::make('file_form_permohonan')
-                            ->label('File Form Permohonan Informasi (PDF)')
-                            ->acceptedFileTypes(['application/pdf'])
+                            ->label('File Form Permohonan Informasi (PDF/Word)')
+                            ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
                             ->directory('formulir')
                             ->preserveFilenames(),
                         Forms\Components\FileUpload::make('file_form_keberatan')
-                            ->label('File Form Pernyataan Keberatan (PDF)')
-                            ->acceptedFileTypes(['application/pdf'])
+                            ->label('File Form Pernyataan Keberatan (PDF/Word)')
+                            ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
                             ->directory('formulir')
                             ->preserveFilenames(),
                         Forms\Components\FileUpload::make('file_daftar_informasi_publik')
-                            ->label('File Daftar Informasi Publik (PDF)')
-                            ->acceptedFileTypes(['application/pdf'])
+                            ->label('File Daftar Informasi Publik (PDF/Word)')
+                            ->acceptedFileTypes(['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'])
                             ->directory('dokumen')
                             ->preserveFilenames(),
                     ]),
