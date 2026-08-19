@@ -17,6 +17,7 @@ return new class extends Migration
             $table->enum('kategori', ['berkala', 'serta_merta', 'setiap_saat']);
             $table->string('file_pdf')->nullable();
             $table->string('link_tautan')->nullable();
+            $table->string('jenis_tautan')->nullable();
             $table->timestamps();
         });
     }

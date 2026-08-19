@@ -14,10 +14,8 @@ return new class extends Migration
         Schema::create('rekapitulasis', function (Blueprint $table) {
             $table->id();
             $table->integer('tahun');
-            $table->integer('total_permohonan')->default(0);
-            $table->integer('dikabulkan')->default(0);
-            $table->integer('ditolak')->default(0);
-            $table->string('gambar_grafik')->nullable();
+            $table->string('judul');
+            $table->string('gambar')->nullable();
             $table->timestamps();
         });
     }

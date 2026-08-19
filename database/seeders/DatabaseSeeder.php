@@ -35,17 +35,7 @@ class DatabaseSeeder extends Seeder
             ]
         );
 
-        \App\Models\Regulasi::create([
-            'judul' => 'UU Nomor 14 Tahun 2008',
-            'sinopsis' => 'Tentang Keterbukaan Informasi Publik',
-            'is_active' => true,
-        ]);
 
-        \App\Models\Regulasi::create([
-            'judul' => 'PP Nomor 61 Tahun 2010',
-            'sinopsis' => 'Tentang Pelaksanaan Undang-undang Keterbukaan Informasi Publik',
-            'is_active' => true,
-        ]);
 
         \App\Models\InformasiPublik::create([
             'judul' => 'Informasi Profil LLDIKTI Wilayah IV',
