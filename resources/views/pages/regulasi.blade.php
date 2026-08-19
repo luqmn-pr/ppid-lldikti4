@@ -3,6 +3,8 @@
 @section('title', 'Regulasi - PPID LLDIKTI Wilayah IV')
 
 @section('content')
+@php $reg = app(\App\Settings\RegulasiSettings::class); @endphp
+
 <!-- Page Header -->
 <div class="relative pt-32 pb-16 overflow-hidden bg-white border-b border-slate-100">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50 pointer-events-none"></div>
@@ -27,39 +29,56 @@
             Berikut adalah regulasi yang berkaitan dengan keterbukaan informasi publik:
         </p>
 
+        {{-- ===== 1. Regulasi Umum ===== --}}
         <ol style="list-style: decimal; padding-left: 1.5rem;" class="space-y-5 mb-10 text-slate-700 text-base">
             <li>
                 Undang-Undang Nomor 14 Tahun 2008 tentang Keterbukaan Informasi Publik.
-                <a href="https://drive.google.com/file/d/1Or-yPwyy-Gv0rlopOnDxvGOlvhwvPetB/view" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_uu_14_2008)
+                    <a href="{{ $reg->link_uu_14_2008 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 Peraturan Pemerintah Nomor 61 Tahun 2010 tentang Pelaksanaan Undang-Undang Keterbukaan Informasi Publik.
-                <a href="https://drive.google.com/file/d/1xLbub5z5GVt_ggBzBjLRTvpeBoyDcRWL/view?usp=drive_link" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pp_61_2010)
+                    <a href="{{ $reg->link_pp_61_2010 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 Peraturan Mahkamah Agung Nomor 2 Tahun 2011 tentang Tata Cara Penyelesaian Sengketa Informasi Publik di Pengadilan.
-                <a href="https://drive.google.com/file/d/1rQryfzAQhfBdr_peUVTHQjydCydE3xWd/view" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_perma_2_2011)
+                    <a href="{{ $reg->link_perma_2_2011 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 Peraturan Komisi Informasi Nomor 1 Tahun 2013 tentang Prosedur Penyelesaian Sengketa Informasi Publik.
-                <a href="https://drive.google.com/file/d/1niHtYdIQmXQZlX8kUfIitSzHxTrGoRmc/view?usp=drive_link" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_perki_1_2013)
+                    <a href="{{ $reg->link_perki_1_2013 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 Peraturan Komisi Informasi Pusat Nomor 1 Tahun 2021 tentang Standar Layanan Informasi Publik.
-                <a href="https://drive.google.com/file/d/1hEw8bLCVMROS-AM_dHnE_32MS1HRumx9/view" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_perki_1_2021)
+                    <a href="{{ $reg->link_perki_1_2021 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
         </ol>
 
+        {{-- ===== 2. Regulasi Kemendikbud (Paragraf) ===== --}}
         <p class="text-slate-700 text-base leading-relaxed mb-8">
             Regulasi yang berkaitan dengan keterbukaan informasi publik di Kementerian Pendidikan Tinggi, Sains, dan Teknologi diatur dalam Peraturan Menteri Pendidikan, Kebudayaan, Riset, dan Teknologi Nomor 69 Tahun 2024 tentang Pengelolaan dan Pelayanan Informasi Publik di Kementerian Pendidikan, Kebudayaan, Riset, dan Teknologi.
-            <a href="https://drive.google.com/file/d/1BY_duIXl1hYn1Q6mhU8O18AiZ1_XiDor/view?usp=drivesdk" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            @if($reg->link_permendikbud_69_2024)
+                <a href="{{ $reg->link_permendikbud_69_2024 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            @endif
         </p>
 
         <p class="text-slate-700 text-base leading-relaxed mb-10">
             Adapun standar pelayanan permintaan informasi publik di Kementerian Pendidikan Tinggi, Sains, dan Teknologi diatur dalam Keputusan Kepala Biro Umum, Hubungan Masyarakat, dan Pengadaan Barang dan Jasa Nomor 0894/A5/OT.02.02/2025 tentang Standar Pelayanan Permintaan Informasi Publik Kementerian Pendidikan Tinggi, Sains, dan Teknologi.
-            <a href="https://drive.google.com/file/d/178QOHKcEUhLa-6NfGWaGpVK7qTZSIKPr/view?usp=drive_link" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            @if($reg->link_sk_biro_2025)
+                <a href="{{ $reg->link_sk_biro_2025 }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+            @endif
         </p>
 
+        {{-- ===== 3. POS ===== --}}
         <p class="text-slate-700 text-base leading-relaxed mb-8">
             Lembaga Layanan Pendidikan Tinggi Wilayah IV juga telah memiliki prosedur operasional standar (POS) dalam pelayanan informasi publik meliputi:
         </p>
@@ -67,27 +86,39 @@
         <ol style="list-style: decimal; padding-left: 1.5rem;" class="space-y-5 mb-16 text-slate-700 text-base">
             <li>
                 POS Layanan Permintaan Informasi Publik.
-                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pos_permintaan)
+                    <a href="{{ $reg->link_pos_permintaan }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 POS Layanan Keberatan Atas Permintaan Informasi Publik.
-                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pos_keberatan)
+                    <a href="{{ $reg->link_pos_keberatan }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 POS Pendokumentasian Informasi Publik.
-                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pos_pendokumentasian)
+                    <a href="{{ $reg->link_pos_pendokumentasian }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 POS Pemutakhiran dan Penetapan Daftar Informasi Publik.
-                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pos_pemutakhiran)
+                    <a href="{{ $reg->link_pos_pemutakhiran }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 POS Pengujian Konsekuensi dan Penetapan Informasi yang Dikecualikan.
-                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pos_pengujian)
+                    <a href="{{ $reg->link_pos_pengujian }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
             <li>
                 POS Pengumuman Informasi Publik.
-                <a href="#" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @if($reg->link_pos_pengumuman)
+                    <a href="{{ $reg->link_pos_pengumuman }}" target="_blank" class="text-primary font-medium hover:underline ml-1">(klik di sini untuk mengunduh)</a>
+                @endif
             </li>
         </ol>
 

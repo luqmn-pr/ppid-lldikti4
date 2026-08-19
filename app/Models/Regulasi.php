@@ -9,10 +9,12 @@ class Regulasi extends Model
 {
     protected $fillable = [
         'judul',
+        'kategori',
         'sinopsis',
         'file_pdf',
         'link_tautan',
         'jenis_tautan',
         'is_active',
+        'urutan',
     ];
 }

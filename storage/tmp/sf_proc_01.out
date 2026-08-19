@@ -1,3 +1,2 @@
-
- INFO No publishable resources for tag [laravel-assets]. 
-
+[Thu Aug 13 07:00:48 2026] 127.0.0.1:56004 [GET] URI: /ppid/admin/login
+[Thu Aug 13 07:01:09 2026] 127.0.0.1:63675 [GET] URI: /ppid/admin/login
