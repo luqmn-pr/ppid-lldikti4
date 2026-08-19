@@ -22,6 +22,7 @@ class GeneralSettings extends Settings
     public ?string $maklumat_image;
     
     public ?string $site_logo;
+    public ?string $footer_logo;
     public ?string $favicon;
     
     public ?string $file_form_permohonan;

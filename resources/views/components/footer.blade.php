@@ -12,7 +12,7 @@
             <div style="flex:0 0 280px; min-width:220px;">
                 <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
                     @php
-                        $logo = $general->site_logo;
+                        $logo = $general->footer_logo;
                     @endphp
                     @if($logo)
                         <img src="{{ Storage::url($logo) }}" alt="Logo" style="height:40px; width:auto;">

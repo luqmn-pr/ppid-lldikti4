@@ -25,13 +25,18 @@ class ManageGeneralSettings extends SettingsPage
                             ->image()
                             ->directory('settings')
                             ->preserveFilenames()
-                            ->label('Logo Website (Navbar/Footer)'),
+                            ->label('Logo Website (Navbar)'),
+                        Forms\Components\FileUpload::make('footer_logo')
+                            ->image()
+                            ->directory('settings')
+                            ->preserveFilenames()
+                            ->label('Logo Footer'),
                         Forms\Components\FileUpload::make('favicon')
                             ->image()
                             ->directory('settings')
                             ->preserveFilenames()
                             ->label('Favicon (Logo Tab Browser)'),
-                    ])->columns(2),
+                    ])->columns(3),
 
                 Forms\Components\Section::make('Informasi Kontak')
                     ->schema([
