@@ -48,7 +48,7 @@
        id="wa-float-btn"
        aria-label="Hubungi kami via WhatsApp"
        title="Chat WhatsApp"
-       style="position:fixed; bottom:24px; right:24px; z-index:99998; width:50px; height:50px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(37,211,102,0.4); text-decoration:none; transition:transform .2s, box-shadow .2s;"
+       style="position:fixed; bottom:20px; right:15px; z-index:99998; width:50px; height:50px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(37,211,102,0.4); text-decoration:none; transition:transform .2s, box-shadow .2s;"
        onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 24px rgba(37,211,102,0.55)'"
        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
         <i class="fa-brands fa-whatsapp" style="color:#fff; font-size:1.5rem;"></i>
@@ -59,7 +59,7 @@
         aria-label="Aktifkan Text to Speech"
         title="Text to Speech"
         onclick="toggleTTS()"
-        style="position:fixed; bottom:24px; left:24px; z-index:99999; width:48px; height:48px; background:#1e3a8a; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(30,58,138,0.35); transition:all .2s;">
+        style="position:fixed; bottom:20px; left:15px; z-index:99999; width:48px; height:48px; background:#1e3a8a; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(30,58,138,0.35); transition:all .2s;">
         <i id="tts-icon" class="ph ph-speaker-simple-x" style="color:#fff; font-size:1.3rem;"></i>
     </button>
     {{-- TTS Label tooltip --}}
