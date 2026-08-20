@@ -15,5 +15,7 @@ class TataCara extends Model
         'deskripsi_langkah',
         'icon',
         'urutan',
+        'gambar',
+        'link',
     ];
 }

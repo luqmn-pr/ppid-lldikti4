@@ -25,18 +25,27 @@ class TataCaraResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('kategori')
+                Forms\Components\Select::make('kategori')
+                    ->options([
+                        'permohonan_informasi' => 'Permohonan Informasi',
+                        'pengajuan_keberatan' => 'Pengajuan Keberatan',
+                        'sengketa_informasi' => 'Penyelesaian Sengketa',
+                    ])
                     ->required(),
                 Forms\Components\TextInput::make('judul_langkah')
+                    ->label('Judul Tata Cara')
                     ->required()
                     ->maxLength(255),
-                Forms\Components\Textarea::make('deskripsi_langkah')
-                    ->required()
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('icon')
-                    ->required()
-                    ->maxLength(255)
-                    ->default('ph-check-circle'),
+                Forms\Components\FileUpload::make('gambar')
+                    ->label('Gambar/Ilustrasi (PNG/SVG)')
+                    ->image()
+                    ->directory('tata-cara')
+                    ->preserveFilenames()
+                    ->required(),
+                Forms\Components\TextInput::make('link')
+                    ->label('Tautan Dokumen (Google Drive/URL)')
+                    ->url()
+                    ->required(),
                 Forms\Components\TextInput::make('urutan')
                     ->required()
                     ->numeric()
@@ -50,9 +59,11 @@ class TataCaraResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('kategori'),
                 Tables\Columns\TextColumn::make('judul_langkah')
+                    ->label('Judul')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('icon')
-                    ->searchable(),
+                Tables\Columns\ImageColumn::make('gambar'),
+                Tables\Columns\TextColumn::make('link')
+                    ->limit(50),
                 Tables\Columns\TextColumn::make('urutan')
                     ->numeric()
                     ->sortable(),
