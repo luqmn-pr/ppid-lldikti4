@@ -25,8 +25,21 @@
     {{-- Vite: CSS + JS --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    {{-- UserWay Accessibility Widget (Posisi: Middle Right agar tidak menutupi navbar/WA) --}}
-    <script src="https://cdn.userway.org/widget.js" data-account="SBAj7Cfrij" data-position="2"></script>
+    {{-- UserWay Accessibility Widget (Posisi: Bottom Right, tapi di-override via CSS agar tepat di atas WA) --}}
+    <script src="https://cdn.userway.org/widget.js" data-account="SBAj7Cfrij" data-position="3"></script>
+
+    <style>
+        /* Memaksa posisi widget UserWay agar tepat berada di atas tombol WhatsApp (anti-kabur) */
+        body > .uwy, 
+        body > div[class*="userway"],
+        body > div[id*="userway"] {
+            top: auto !important;
+            bottom: 85px !important; /* 20px (bottom WA) + 50px (tinggi WA) + 15px (jarak antar tombol) */
+            right: 15px !important;
+            left: auto !important;
+            transform: none !important; /* Mencegah UserWay melakukan auto-centering vertical */
+        }
+    </style>
 
     @stack('head')
 </head>
