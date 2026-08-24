@@ -25,8 +25,8 @@
     {{-- Vite: CSS + JS --}}
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 
-    {{-- UserWay Accessibility Widget (default: kanan atas) --}}
-    <script src="https://cdn.userway.org/widget.js" data-account="SBAj7Cfrij"></script>
+    {{-- UserWay Accessibility Widget (Posisi: Middle Right agar tidak menutupi navbar/WA) --}}
+    <script src="https://cdn.userway.org/widget.js" data-account="SBAj7Cfrij" data-position="2"></script>
 
     @stack('head')
 </head>
