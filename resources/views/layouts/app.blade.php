@@ -28,19 +28,6 @@
     {{-- UserWay Accessibility Widget (Posisi: Bottom Right, tapi di-override via CSS agar tepat di atas WA) --}}
     <script src="https://cdn.userway.org/widget.js" data-account="SBAj7Cfrij" data-position="3"></script>
 
-    <style>
-        /* Memaksa posisi widget UserWay agar tepat berada di atas tombol WhatsApp (anti-kabur) */
-        body > .uwy, 
-        body > div[class*="userway"],
-        body > div[id*="userway"] {
-            top: auto !important;
-            bottom: 85px !important; /* 20px (bottom WA) + 50px (tinggi WA) + 15px (jarak antar tombol) */
-            right: 15px !important;
-            left: auto !important;
-            transform: none !important; /* Mencegah UserWay melakukan auto-centering vertical */
-        }
-    </style>
-
     @stack('head')
 </head>
 
@@ -55,13 +42,38 @@
     {{-- Footer --}}
     <x-footer />
 
-    {{-- WhatsApp Floating Button (kanan bawah, di bawah UserWay) --}}
+    {{-- Sembunyikan tombol bawaan UserWay, gunakan tombol kustom kita sendiri --}}
+    <style>
+        /* Sembunyikan default button UserWay */
+        #userwayAccessibilityIcon { display: none !important; }
+    </style>
+
+    {{-- Tombol Akses UserWay Kustom (di atas WA) --}}
+    <button id="custom-userway-btn"
+        aria-label="Aksesibilitas"
+        title="Menu Aksesibilitas"
+        onclick="UserWay.widgetOpen()"
+        style="position:fixed; bottom:76px; right:16px; z-index:99998; width:48px; height:48px;
+               background:#2563EB; border:none; border-radius:50%;
+               display:flex; align-items:center; justify-content:center;
+               cursor:pointer; box-shadow:0 4px 16px rgba(37,99,235,0.45);
+               transition:transform .2s, box-shadow .2s;"
+        onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 24px rgba(37,99,235,0.6)'"
+        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 16px rgba(37,99,235,0.45)'">
+        <i class="ph ph-person-arms-spread" style="color:#fff; font-size:1.4rem;"></i>
+    </button>
+
+    {{-- Tombol WhatsApp (bawah, sejajar dengan tombol aksesibilitas di atas) --}}
     <a href="https://web.whatsapp.com/send?text=a&phone=6282244121226"
        target="_blank"
        id="wa-float-btn"
        aria-label="Hubungi kami via WhatsApp"
        title="Chat WhatsApp"
-       style="position:fixed; bottom:20px; right:15px; z-index:99998; width:50px; height:50px; background:#25D366; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(37,211,102,0.4); text-decoration:none; transition:transform .2s, box-shadow .2s;"
+       style="position:fixed; bottom:20px; right:16px; z-index:99998; width:48px; height:48px;
+              background:#25D366; border-radius:50%;
+              display:flex; align-items:center; justify-content:center;
+              box-shadow:0 4px 16px rgba(37,211,102,0.4);
+              text-decoration:none; transition:transform .2s, box-shadow .2s;"
        onmouseover="this.style.transform='scale(1.1)'; this.style.boxShadow='0 6px 24px rgba(37,211,102,0.55)'"
        onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 4px 16px rgba(37,211,102,0.4)'">
         <i class="fa-brands fa-whatsapp" style="color:#fff; font-size:1.5rem;"></i>
@@ -72,7 +84,7 @@
         aria-label="Aktifkan Text to Speech"
         title="Text to Speech"
         onclick="toggleTTS()"
-        style="position:fixed; bottom:20px; left:15px; z-index:99999; width:48px; height:48px; background:#1e3a8a; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(30,58,138,0.35); transition:all .2s;">
+        style="position:fixed; bottom:20px; left:16px; z-index:99999; width:48px; height:48px; background:#1e3a8a; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(30,58,138,0.35); transition:all .2s;">
         <i id="tts-icon" class="ph ph-speaker-simple-x" style="color:#fff; font-size:1.3rem;"></i>
     </button>
     {{-- TTS Label tooltip --}}
