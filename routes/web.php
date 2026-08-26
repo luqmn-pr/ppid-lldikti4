@@ -6,16 +6,8 @@ use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\RegulasiController;
 use App\Http\Controllers\InformasiPublikController;
 use App\Http\Controllers\TataCaraController;
+use App\Http\Controllers\FormulirController;
 
-
-    Route::get('/debug-php', function () {
-        return [
-            'php_ini' => php_ini_loaded_file(),
-            'upload_tmp_dir' => ini_get('upload_tmp_dir'),
-            'sys_temp_dir' => ini_get('sys_temp_dir'),
-            'sys_get_temp_dir' => sys_get_temp_dir(),
-        ];
-    });
 
     Route::get('/', [HomeController::class, 'index'])->name('home');
 
@@ -30,16 +22,12 @@ use App\Http\Controllers\TataCaraController;
     Route::get('/tata-cara', [TataCaraController::class, 'index'])->name('tata-cara');
 
 
-    Route::get('/formulir-permohonan', function () {
-        return view('pages.form-viewer', [
-            'title' => 'Formulir Permohonan Informasi',
-            'pdf_file' => app(\App\Settings\GeneralSettings::class)->file_form_permohonan
-        ]);
-    })->name('formulir.permohonan');
+    Route::get('/formulir-permohonan', [FormulirController::class, 'showPermohonan'])->name('formulir.permohonan');
+    Route::post('/formulir-permohonan/download', [FormulirController::class, 'downloadPermohonan'])->name('formulir.permohonan.download');
 
     Route::get('/formulir-keberatan', function () {
         return view('pages.form-viewer', [
-            'title' => 'Formulir Pernyataan Keberatan',
+            'title'    => 'Formulir Pernyataan Keberatan',
             'pdf_file' => app(\App\Settings\GeneralSettings::class)->file_form_keberatan
         ]);
     })->name('formulir.keberatan');

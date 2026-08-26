@@ -7,7 +7,7 @@
 <div class="relative pt-32 pb-16 overflow-hidden bg-white border-b border-slate-100">
     <div class="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-orange-50 pointer-events-none"></div>
     <div class="absolute right-0 top-0 w-[500px] h-[400px] bg-blue-100 rounded-full blur-[120px] opacity-30 pointer-events-none -translate-y-1/2"></div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16 relative z-10">
         <div class="flex items-center gap-2 text-sm text-slate-400 mb-6">
             <a href="{{ route('home') }}" class="hover:text-primary transition-colors">Beranda</a>
             <i class="ph ph-caret-right text-slate-300"></i>
@@ -49,3 +49,4 @@
     </div>
 </div>
 @endsection
+

@@ -1,5 +1,5 @@
 <nav class="fixed w-full z-50 glass-nav transition-all duration-300" id="navbar">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto px-6 md:px-10 lg:px-16">
         <div class="flex justify-between items-center h-20">
             <div class="flex-shrink-0">
                 <a href="{{ route('home') }}">
@@ -158,3 +158,4 @@
         </div>
     </div>
 </nav>
+
