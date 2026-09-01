@@ -84,11 +84,11 @@
         aria-label="Aktifkan Text to Speech"
         title="Text to Speech"
         onclick="toggleTTS()"
-        style="position:fixed; bottom:20px; left:16px; z-index:99999; width:48px; height:48px; background:#1e3a8a; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(30,58,138,0.35); transition:all .2s;">
+        style="position:fixed; bottom:20px; left:16px; z-index:99999; width:48px; height:48px; background:#082a99; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(8,42,153,0.35); transition:all .2s;">
         <i id="tts-icon" class="ph ph-speaker-simple-x" style="color:#fff; font-size:1.3rem;"></i>
     </button>
     {{-- TTS Label tooltip --}}
-    <div id="tts-label" style="position:fixed; bottom:80px; left:24px; z-index:99999; background:#1e3a8a; color:#fff; font-size:0.7rem; font-weight:600; padding:4px 10px; border-radius:20px; white-space:nowrap; opacity:0; transition:opacity .2s; pointer-events:none; letter-spacing:0.04em;">TTS Nonaktif</div>
+    <div id="tts-label" style="position:fixed; bottom:80px; left:24px; z-index:99999; background:#082a99; color:#fff; font-size:0.7rem; font-weight:600; padding:4px 10px; border-radius:20px; white-space:nowrap; opacity:0; transition:opacity .2s; pointer-events:none; letter-spacing:0.04em;">TTS Nonaktif</div>
 
     {{-- TTS Script --}}
     <script>
@@ -114,11 +114,11 @@
                 speak('Text to speech aktif');
             } else {
                 synth.cancel();
-                btn.style.background = '#1e3a8a';
-                btn.style.boxShadow = '0 4px 16px rgba(30,58,138,0.35)';
+                btn.style.background = '#082a99';
+                btn.style.boxShadow = '0 4px 16px rgba(8,42,153,0.35)';
                 icon.className = 'ph ph-speaker-simple-x';
                 label.textContent = 'TTS Nonaktif';
-                label.style.background = '#1e3a8a';
+                label.style.background = '#082a99';
                 label.style.opacity = '1';
                 setTimeout(() => { label.style.opacity = '0'; }, 1500);
             }

@@ -60,9 +60,9 @@
                     {{-- Nomor WA / Posel --}}
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                            Nomor WhatsApp / Posel (Email)
+                            Nomor WhatsApp / Posel (Email) <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" name="nomor_wa_email" value="{{ old('nomor_wa_email') }}"
+                        <input type="text" name="nomor_wa_email" value="{{ old('nomor_wa_email') }}" required
                             placeholder="Contoh: 081234567890 / nama@email.com"
                             class="w-full bg-slate-50/60 hover:bg-white focus:bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition">
                     </div>
@@ -70,9 +70,9 @@
                     {{-- Pekerjaan / Profesi --}}
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                            Pekerjaan / Profesi
+                            Pekerjaan / Profesi <span class="text-red-500">*</span>
                         </label>
-                        <input type="text" name="pekerjaan_profesi" value="{{ old('pekerjaan_profesi') }}"
+                        <input type="text" name="pekerjaan_profesi" value="{{ old('pekerjaan_profesi') }}" required
                             placeholder="Contoh: Mahasiswa, Dosen, Pegawai Swasta, Peneliti"
                             class="w-full bg-slate-50/60 hover:bg-white focus:bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition">
                     </div>
@@ -80,9 +80,9 @@
                     {{-- Alamat Tinggal / Domisili --}}
                     <div class="md:col-span-2">
                         <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                            Alamat Tinggal / Domisili
+                            Alamat Tinggal / Domisili <span class="text-red-500">*</span>
                         </label>
-                        <textarea name="alamat" rows="2" placeholder="Masukkan alamat lengkap domisili atau instansi pemohon"
+                        <textarea name="alamat" rows="2" required placeholder="Masukkan alamat lengkap domisili atau instansi pemohon"
                             class="w-full bg-slate-50/60 hover:bg-white focus:bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition resize-y">{{ old('alamat') }}</textarea>
                     </div>
                 </div>
@@ -99,18 +99,18 @@
                     {{-- Rincian Informasi --}}
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                            Rincian Informasi yang Dibutuhkan
+                            Rincian Informasi yang Dibutuhkan <span class="text-red-500">*</span>
                         </label>
-                        <textarea name="rincian_informasi" rows="3" placeholder="Tuliskan secara spesifik dan jelas data atau informasi yang Anda butuhkan..."
+                        <textarea name="rincian_informasi" rows="3" required placeholder="Tuliskan secara spesifik dan jelas data atau informasi yang Anda butuhkan..."
                             class="w-full bg-slate-50/60 hover:bg-white focus:bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition resize-y">{{ old('rincian_informasi') }}</textarea>
                     </div>
 
                     {{-- Tujuan Penggunaan --}}
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                            Tujuan Penggunaan Informasi
+                            Tujuan Penggunaan Informasi <span class="text-red-500">*</span>
                         </label>
-                        <textarea name="tujuan_penggunaan" rows="2" placeholder="Jelaskan maksud dan tujuan penggunaan informasi (misal: Penelitian Skripsi, Laporan, Kajian Akademik)..."
+                        <textarea name="tujuan_penggunaan" rows="2" required placeholder="Jelaskan maksud dan tujuan penggunaan informasi (misal: Penelitian Skripsi, Laporan, Kajian Akademik)..."
                             class="w-full bg-slate-50/60 hover:bg-white focus:bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-2.5 text-sm text-slate-800 placeholder:text-slate-400 transition resize-y">{{ old('tujuan_penggunaan') }}</textarea>
                     </div>
                 </div>
@@ -145,11 +145,11 @@
                     {{-- Cara Mendapatkan Salinan --}}
                     <div>
                         <label class="block text-xs font-semibold text-slate-700 uppercase tracking-wider mb-2">
-                            Cara Mendapatkan Salinan (Jika memilih salinan)
+                            Cara Mendapatkan Salinan <span class="text-red-500">*</span>
                         </label>
-                        <select name="cara_mendapatkan_salinan"
+                        <select name="cara_mendapatkan_salinan" required
                             class="w-full bg-slate-50/60 hover:bg-white focus:bg-white border border-slate-200 focus:border-primary focus:ring-2 focus:ring-primary/20 rounded-xl px-4 py-2.5 text-sm text-slate-800 transition">
-                            <option value="" selected>-- Pilih cara pengiriman / pengambilan --</option>
+                            <option value="" disabled selected>-- Pilih cara pengiriman / pengambilan --</option>
                             <option value="Mengambil Langsung" {{ old('cara_mendapatkan_salinan') == 'Mengambil Langsung' ? 'selected' : '' }}>Mengambil Langsung</option>
                             <option value="Pos" {{ old('cara_mendapatkan_salinan') == 'Pos' ? 'selected' : '' }}>Pos</option>
                             <option value="Posel" {{ old('cara_mendapatkan_salinan') == 'Posel' ? 'selected' : '' }}>Posel (Email)</option>

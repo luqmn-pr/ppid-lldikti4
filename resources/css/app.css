@@ -13,8 +13,8 @@
 
 @theme {
     /* Brand Colors */
-    --color-primary: #1d4294;
-    --color-primary-dark: #153070;
+    --color-primary: #082a99;
+    --color-primary-dark: #00155b;
     --color-secondary: #ef9d34;
     --color-secondary-dark: #c47d25;
     --color-dark: #0f172a;
@@ -56,7 +56,7 @@ body {
    Text Gradient
    =================================== */
 .text-gradient {
-    background: linear-gradient(135deg, #1d4294, #ef9d34);
+    background: linear-gradient(135deg, #082a99, #ef9d34);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -66,7 +66,7 @@ body {
    Hero Dot Pattern
    =================================== */
 .hero-pattern {
-    background-image: radial-gradient(#1d4294 1px, transparent 1px);
+    background-image: radial-gradient(#082a99 1px, transparent 1px);
     background-size: 32px 32px;
     opacity: 0.05;
 }
@@ -130,7 +130,7 @@ details[open] summary ~ * {
    Utility: Border Accent Left
    =================================== */
 .border-l-accent-primary {
-    border-left: 4px solid #1d4294;
+    border-left: 4px solid #082a99;
 }
 
 .border-l-accent-secondary {

@@ -1,7 +1,7 @@
 @php
     $general = app(\App\Settings\GeneralSettings::class);
 @endphp
-<footer style="background:#1e3a5f; color:#bfdbfe; padding-top:2.5rem; padding-bottom:1rem; position:relative; overflow:hidden; margin-top:2rem;">
+<footer style="background:#082a99; color:#bfdbfe; padding-top:2.5rem; padding-bottom:1rem; position:relative; overflow:hidden; margin-top:2rem;">
     <div style="position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(to right, #f97316, #fff, #f97316);"></div>
     <div style="max-width:1200px; margin:0 auto; padding:0 1.5rem;">
 
@@ -29,22 +29,22 @@
                 </p>
                 <div style="display:flex; gap:0.5rem; flex-wrap:wrap;">
                     @if($general->url_instagram)
-                    <a href="{{ $general->url_instagram }}" target="_blank" title="Instagram" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                    <a href="{{ $general->url_instagram }}" target="_blank" title="Instagram" style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;transition:background .2s;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
                         <i class="fa-brands fa-instagram" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                     @if($general->url_tiktok)
-                    <a href="{{ $general->url_tiktok }}" target="_blank" title="TikTok" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                    <a href="{{ $general->url_tiktok }}" target="_blank" title="TikTok" style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
                         <i class="fa-brands fa-tiktok" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                     @if($general->url_youtube)
-                    <a href="{{ $general->url_youtube }}" target="_blank" title="YouTube" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                    <a href="{{ $general->url_youtube }}" target="_blank" title="YouTube" style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
                         <i class="fa-brands fa-youtube" style="font-size:0.8rem;"></i>
                     </a>
                     @endif
                     @if($general->url_facebook)
-                    <a href="{{ $general->url_facebook }}" target="_blank" title="Facebook" style="width:32px;height:32px;border-radius:50%;background:#1d4ed8;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='#1d4ed8'">
+                    <a href="{{ $general->url_facebook }}" target="_blank" title="Facebook" style="width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,0.1);display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;" onmouseover="this.style.background='#f97316'" onmouseout="this.style.background='rgba(255,255,255,0.1)'">
                         <i class="fa-brands fa-facebook-f" style="font-size:0.8rem;"></i>
                     </a>
                     @endif

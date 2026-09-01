@@ -25,9 +25,5 @@ use App\Http\Controllers\FormulirController;
     Route::get('/formulir-permohonan', [FormulirController::class, 'showPermohonan'])->name('formulir.permohonan');
     Route::post('/formulir-permohonan/download', [FormulirController::class, 'downloadPermohonan'])->name('formulir.permohonan.download');
 
-    Route::get('/formulir-keberatan', function () {
-        return view('pages.form-viewer', [
-            'title'    => 'Formulir Pernyataan Keberatan',
-            'pdf_file' => app(\App\Settings\GeneralSettings::class)->file_form_keberatan
-        ]);
-    })->name('formulir.keberatan');
+    Route::get('/formulir-keberatan', [FormulirController::class, 'showKeberatan'])->name('formulir.keberatan');
+    Route::post('/formulir-keberatan/download', [FormulirController::class, 'downloadKeberatan'])->name('formulir.keberatan.download');
