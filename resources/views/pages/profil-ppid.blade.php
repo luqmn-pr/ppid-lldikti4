@@ -199,15 +199,26 @@
             <div class="flex-1 h-px bg-slate-100"></div>
         </div>
 
-        <!-- ===== SECTION 4: Struktur PPID ===== -->
+        {{-- ===== SECTION 4: Struktur PPID ===== --}}
         <div class="text-center mb-12">
             <h2 class="text-2xl md:text-3xl font-extrabold text-slate-800 mb-8">Struktur PPID</h2>
-            <div class="bg-slate-50 border border-slate-200 rounded-2xl p-12 max-w-2xl mx-auto flex flex-col items-center justify-center min-h-[200px]">
-                <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
-                    <i class="ph ph-hourglass-high text-2xl text-slate-400"></i>
+
+            @if(!empty($profil->struktur_organisasi_image))
+                <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-sm w-full">
+                    <img
+                        src="{{ Storage::url($profil->struktur_organisasi_image) }}"
+                        alt="Bagan Struktur Organisasi PPID LLDIKTI Wilayah IV"
+                        class="w-full h-auto block"
+                    >
                 </div>
-                <p class="text-slate-600 font-medium text-lg">Menunggu pengesahan SK PPID yang terbaru</p>
-            </div>
+            @else
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-12 max-w-2xl mx-auto flex flex-col items-center justify-center min-h-[200px]">
+                    <div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-sm mb-4">
+                        <i class="ph ph-hourglass-high text-2xl text-slate-400"></i>
+                    </div>
+                    <p class="text-slate-600 font-medium text-lg">Menunggu pengesahan SK PPID yang terbaru</p>
+                </div>
+            @endif
         </div>
 
     </div>
